@@ -637,9 +637,9 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Tools" id="PhB-AS-QVn">
                                     <items>
-                                        <menuItem title="Clear" keyEquivalent="K" id="iLR-pV-yJW">
+                                        <menuItem title="Clear" keyEquivalent="K" identifier="action_clear" id="iLR-pV-yJW">
                                             <connections>
-                                                <action selector="clear:" target="Ady-hI-5gd" id="7cT-at-Cmu"/>
+                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="Kyv-H6-xPK"/>
                                             </connections>
                                         </menuItem>
                                     </items>

@@ -3,7 +3,7 @@
 //  Bagel
 //
 //  Created by Andras Olah on 2020. 01. 02..
-//  Copyright © 2020. Yagiz Lab. All rights reserved.
+//  Copyright © 2020. Andras Olah. All rights reserved.
 //
 
 import Cocoa

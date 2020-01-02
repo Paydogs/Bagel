@@ -91,11 +91,11 @@ class ViewController: NSViewController, NSUserInterfaceValidations {
         }
     }
 
-    @IBAction func clear(_ sender: Any) {
-        packetsViewController?.clearButtonAction(sender)
+    @IBAction func handleMenuAction(_ sender: Any) {
+        handleAction(sender)
     }
 
     func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) -> Bool {
-        return self.packetsViewController?.viewModel?.itemCount() ?? 0 > 0
+        return validateMenuItem(item)
     }
 }
