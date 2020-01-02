@@ -352,7 +352,6 @@
 		BC9C779521634D1F00E8ADE8 /* OverviewViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BE025CAF23BD66420025B6D7 /* Extensions */,
 				BC61DA772162BD68000F6D2F /* OverviewViewController.swift */,
 				BC9C779621634D3400E8ADE8 /* OverviewViewModel.swift */,
 			);
@@ -475,6 +474,7 @@
 		BCD0E025210F5E0D00CE5C7B /* Bagel */ = {
 			isa = PBXGroup;
 			children = (
+				BE5E2BAE23BD8DE0000D6B9C /* MagniExtensions */,
 				BC911A3F2168BC7F00B755D4 /* Themes */,
 				BC1F5B35216746CA0045C871 /* Fonts */,
 				BC75A80921737A7300A2A5B3 /* jsonViewer */,
@@ -654,6 +654,22 @@
 				BE025CB023BD665D0025B6D7 /* OverviewViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE5E2BAE23BD8DE0000D6B9C /* MagniExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE5E2BAF23BD8E32000D6B9C /* OverviewViewController */,
+			);
+			path = MagniExtensions;
+			sourceTree = "<group>";
+		};
+		BE5E2BAF23BD8E32000D6B9C /* OverviewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE025CAF23BD66420025B6D7 /* Extensions */,
+			);
+			path = OverviewViewController;
 			sourceTree = "<group>";
 		};
 		DE6C4711091F42DCE97894B2 /* Pods */ = {
