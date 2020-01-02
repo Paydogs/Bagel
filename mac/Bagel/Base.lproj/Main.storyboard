@@ -473,7 +473,8 @@
                                                         </menu>
                                                     </menuItem>
                                                     <menuItem isSeparatorItem="YES" id="Ndw-q3-faq"/>
-                                                    <menuItem title="Show Colors" keyEquivalent="C" id="bgn-CT-cEk">
+                                                    <menuItem title="Show Colors" id="bgn-CT-cEk">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="orderFrontColorPanel:" target="Ady-hI-5gd" id="mSX-Xz-DV3"/>
                                                         </connections>
@@ -642,9 +643,22 @@
                                                 <action selector="handleMenuAction:" target="Ady-hI-5gd" id="Kyv-H6-xPK"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="YgI-s6-MP3"/>
                                         <menuItem title="Clear" keyEquivalent="K" identifier="action_clear" id="tkE-AI-6nI">
                                             <connections>
                                                 <action selector="handleMenuAction:" target="Ady-hI-5gd" id="Oif-3t-yo3"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="qsn-DX-ePB"/>
+                                        <menuItem title="Copy Package" identifier="action_copyPackage" id="nmJ-X6-lw3">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="uJd-KF-Td8"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Copy Response Body" keyEquivalent="C" identifier="action_copyResponseBody" id="obd-vK-fm5">
+                                            <connections>
+                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="F5l-Rx-9ae"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -920,15 +934,25 @@
                                     <constraint firstItem="buX-0C-nYy" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="tPC-xY-5Xi"/>
                                 </constraints>
                             </customView>
+                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-Ua-wHY" customClass="AlertView" customModule="Bagel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="827" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="k6C-F7-1Bx"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="pum-eU-Zhk" firstAttribute="top" secondItem="oAB-hK-plE" secondAttribute="top" id="6oR-v8-wNq"/>
+                            <constraint firstAttribute="bottom" secondItem="i4c-Ua-wHY" secondAttribute="bottom" id="BEE-um-WgC"/>
                             <constraint firstAttribute="bottom" secondItem="pum-eU-Zhk" secondAttribute="bottom" id="IFJ-Om-85I"/>
+                            <constraint firstAttribute="trailing" secondItem="i4c-Ua-wHY" secondAttribute="trailing" id="Kbo-1J-npS"/>
                             <constraint firstItem="pum-eU-Zhk" firstAttribute="leading" secondItem="oAB-hK-plE" secondAttribute="leading" id="LqT-3b-J9I"/>
+                            <constraint firstItem="i4c-Ua-wHY" firstAttribute="leading" secondItem="oAB-hK-plE" secondAttribute="leading" id="YRM-ug-UXN"/>
                             <constraint firstAttribute="trailing" secondItem="pum-eU-Zhk" secondAttribute="trailing" id="ZP6-5e-6jt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alertView" destination="i4c-Ua-wHY" id="efi-Xk-3NL"/>
                         <outlet property="devicesBackgroundBox" destination="VBx-aB-Jng" id="Cd2-Nz-3h1"/>
                         <outlet property="packetsBackgroundBox" destination="buX-0C-nYy" id="5vI-qx-nyB"/>
                         <outlet property="projectsBackgroundBox" destination="MdL-Ur-DWv" id="edN-fP-mIh"/>

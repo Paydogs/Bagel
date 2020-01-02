@@ -9,12 +9,15 @@
 enum Actions : String {
     case clear = "action_clear"
     case reconnect = "action_reconnect"
+    case copyPackage = "action_copyPackage"
+    case copyResponseBody = "action_copyResponseBody"
 }
 
 extension ViewController {
     func getHandledMenuItems() -> [HandledMenuItem] {
         return [clearAction(),
-                reconnectAction()]
+                reconnectAction(),
+                copyResponseBodyAction()]
     }
 }
 
@@ -31,5 +34,16 @@ extension ViewController {
         return HandledMenuItem(itemIdentifier: Actions.reconnect.rawValue,
                                action: { let publisher = BagelController.shared.publisher
                                 publisher.tryPublishAgain() })
+    }
+
+    func copyPackageAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.copyPackage.rawValue,
+                               action: { })
+    }
+
+    func copyResponseBodyAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.copyResponseBody.rawValue,
+                               action: { [weak self] in
+                                self?.packetsViewController?.copyResponseBodyAction("")})
     }
 }

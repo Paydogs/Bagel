@@ -19,6 +19,8 @@ class ViewController: NSViewController, NSUserInterfaceValidations {
     @IBOutlet weak var projectsBackgroundBox: NSBox!
     @IBOutlet weak var devicesBackgroundBox: NSBox!
     @IBOutlet weak var packetsBackgroundBox: NSBox!
+
+    @IBOutlet weak var alertView: AlertView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
