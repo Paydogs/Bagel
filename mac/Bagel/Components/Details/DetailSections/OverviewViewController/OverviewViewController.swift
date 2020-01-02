@@ -15,6 +15,7 @@ class OverviewViewController: BaseViewController, DetailSectionProtocol {
     @IBOutlet var overviewTextView: NSTextView!
     
     @IBOutlet weak var curlButton: NSButton!
+    @IBOutlet weak var copyBody: NSButton!
     @IBOutlet weak var copyToClipboardButton: NSButton!
     
     var viewModel: OverviewViewModel?

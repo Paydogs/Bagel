@@ -96,6 +96,8 @@
 		BCFC854C213848FD001EC6D7 /* BagelProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC854B213848FD001EC6D7 /* BagelProjectModel.swift */; };
 		BCFC854E2138490E001EC6D7 /* BagelDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC854D2138490E001EC6D7 /* BagelDeviceModel.swift */; };
 		BCFC855021384981001EC6D7 /* BagelPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC854F21384981001EC6D7 /* BagelPacket.swift */; };
+		BE025CAE23BD65B40025B6D7 /* OverviewViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE025CAD23BD65B40025B6D7 /* OverviewViewModel+Extension.swift */; };
+		BE025CB123BD665D0025B6D7 /* OverviewViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE025CB023BD665D0025B6D7 /* OverviewViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +214,8 @@
 		BCFC854B213848FD001EC6D7 /* BagelProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelProjectModel.swift; sourceTree = "<group>"; };
 		BCFC854D2138490E001EC6D7 /* BagelDeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelDeviceModel.swift; sourceTree = "<group>"; };
 		BCFC854F21384981001EC6D7 /* BagelPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelPacket.swift; sourceTree = "<group>"; };
+		BE025CAD23BD65B40025B6D7 /* OverviewViewModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OverviewViewModel+Extension.swift"; sourceTree = "<group>"; };
+		BE025CB023BD665D0025B6D7 /* OverviewViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OverviewViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CF8C8D13D8DDE9F8E381A103 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		D3BC1136B2E3E3417E241E77 /* Pods-Bagel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -348,6 +352,7 @@
 		BC9C779521634D1F00E8ADE8 /* OverviewViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BE025CAF23BD66420025B6D7 /* Extensions */,
 				BC61DA772162BD68000F6D2F /* OverviewViewController.swift */,
 				BC9C779621634D3400E8ADE8 /* OverviewViewModel.swift */,
 			);
@@ -642,6 +647,15 @@
 			path = BagelController;
 			sourceTree = "<group>";
 		};
+		BE025CAF23BD66420025B6D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE025CAD23BD65B40025B6D7 /* OverviewViewModel+Extension.swift */,
+				BE025CB023BD665D0025B6D7 /* OverviewViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DE6C4711091F42DCE97894B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -824,8 +838,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Bagel/Pods-Bagel-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
@@ -833,8 +845,6 @@
 				"${BUILT_PRODUCTS_DIR}/macOSThemeKit/macOSThemeKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Highlightr.framework",
@@ -859,6 +869,7 @@
 				BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */,
 				BCEB9AA2217C94C1008BBF3C /* BagelExtensions.swift in Sources */,
 				BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */,
+				BE025CB123BD665D0025B6D7 /* OverviewViewController+Extensions.swift in Sources */,
 				BCEB9AA8217CAA23008BBF3C /* OverviewRepresentation.swift in Sources */,
 				8A814D05228ECCED0049A64E /* DetailSectionProtocol.swift in Sources */,
 				BCEB9AB9217DD653008BBF3C /* Date.swift in Sources */,
@@ -877,6 +888,7 @@
 				BC9C77AC216385DC00E8ADE8 /* DataTextViewController.swift in Sources */,
 				BC7E67E7216E181400E1289E /* DataJSONRepresentation.swift in Sources */,
 				BC9C77B42163897F00E8ADE8 /* DataJSONViewModel.swift in Sources */,
+				BE025CAE23BD65B40025B6D7 /* OverviewViewModel+Extension.swift in Sources */,
 				BCBD86E4215916E0009CBEA7 /* BagelProjectController.swift in Sources */,
 				BCEB9AB7217DD546008BBF3C /* DatePacketTableCellView.swift in Sources */,
 				BCFC854021384667001EC6D7 /* ProjectsViewModel.swift in Sources */,
@@ -1085,7 +1097,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 64GU57DP44;
 				INFOPLIST_FILE = Bagel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -1104,7 +1116,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 64GU57DP44;
 				INFOPLIST_FILE = Bagel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
