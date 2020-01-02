@@ -637,9 +637,14 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Tools" id="PhB-AS-QVn">
                                     <items>
-                                        <menuItem title="Clear" keyEquivalent="K" identifier="action_clear" id="iLR-pV-yJW">
+                                        <menuItem title="Reconnect" keyEquivalent="R" identifier="action_reconnect" id="iLR-pV-yJW">
                                             <connections>
                                                 <action selector="handleMenuAction:" target="Ady-hI-5gd" id="Kyv-H6-xPK"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Clear" keyEquivalent="K" identifier="action_clear" id="tkE-AI-6nI">
+                                            <connections>
+                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="Oif-3t-yo3"/>
                                             </connections>
                                         </menuItem>
                                     </items>

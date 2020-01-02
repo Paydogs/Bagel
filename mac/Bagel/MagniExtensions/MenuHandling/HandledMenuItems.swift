@@ -8,11 +8,13 @@
 
 enum Actions : String {
     case clear = "action_clear"
+    case reconnect = "action_reconnect"
 }
 
 extension ViewController {
     func getHandledMenuItems() -> [HandledMenuItem] {
-        return [clearAction()]
+        return [clearAction(),
+                reconnectAction()]
     }
 }
 
@@ -23,5 +25,11 @@ extension ViewController {
                                 self?.packetsViewController?.clearButtonAction("") },
                                isValid: { [weak self] in
                                 return self?.packetsViewController?.viewModel?.itemCount() ?? 0 > 0 })
+    }
+
+    func reconnectAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.reconnect.rawValue,
+                               action: { let publisher = BagelController.shared.publisher
+                                publisher.tryPublishAgain() })
     }
 }

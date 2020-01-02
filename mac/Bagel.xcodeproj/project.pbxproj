@@ -682,11 +682,19 @@
 		BE5E2BB223BD92C2000D6B9C /* MenuHandling */ = {
 			isa = PBXGroup;
 			children = (
-				BE5E2BB523BDA053000D6B9C /* HandledMenuItem.swift */,
+				BE5E2BB723BDA395000D6B9C /* Model */,
 				BE5E2BB323BD92E4000D6B9C /* HandledMenuItems.swift */,
 				BE5E2BB023BD8F1D000D6B9C /* MenuHandling.swift */,
 			);
 			path = MenuHandling;
+			sourceTree = "<group>";
+		};
+		BE5E2BB723BDA395000D6B9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE5E2BB523BDA053000D6B9C /* HandledMenuItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DE6C4711091F42DCE97894B2 /* Pods */ = {
