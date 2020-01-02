@@ -9,7 +9,7 @@
 import Cocoa
 import macOSThemeKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSUserInterfaceValidations {
 
     var projectsViewController: ProjectsViewController?
     var devicesViewController: DevicesViewController?
@@ -22,6 +22,8 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.becomeFirstResponder()
 
         _ = BagelController.shared
         
@@ -89,6 +91,11 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func clear(_ sender: Any) {
+        packetsViewController?.clearButtonAction(sender)
+    }
 
+    func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) -> Bool {
+        return self.packetsViewController?.viewModel?.itemCount() ?? 0 > 0
+    }
 }
-
