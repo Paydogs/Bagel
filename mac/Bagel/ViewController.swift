@@ -20,6 +20,10 @@ class ViewController: NSViewController, NSUserInterfaceValidations {
     @IBOutlet weak var devicesBackgroundBox: NSBox!
     @IBOutlet weak var packetsBackgroundBox: NSBox!
 
+    @IBOutlet weak var mainSplitView: NSSplitView!
+    @IBOutlet weak var leftPane: NSView!
+    @IBOutlet weak var rightPane: NSView!
+
     @IBOutlet weak var alertView: AlertView!
     
     override func viewDidLoad() {
@@ -32,7 +36,6 @@ class ViewController: NSViewController, NSUserInterfaceValidations {
         self.projectsBackgroundBox.fillColor = ThemeColor.projectListBackgroundColor
         self.devicesBackgroundBox.fillColor = ThemeColor.deviceListBackgroundColor
         self.packetsBackgroundBox.fillColor = ThemeColor.packetListAndDetailBackgroundColor
-        
     }
 
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {

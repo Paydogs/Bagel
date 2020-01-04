@@ -11,13 +11,15 @@ enum Actions : String {
     case reconnect = "action_reconnect"
     case copyPackage = "action_copyPackage"
     case copyResponseBody = "action_copyResponseBody"
+    case toggleProjects = "action_toggleProjects"
 }
 
 extension ViewController {
     func getHandledMenuItems() -> [HandledMenuItem] {
         return [clearAction(),
                 reconnectAction(),
-                copyResponseBodyAction()]
+                copyResponseBodyAction(),
+                toggleProjectsAction()]
     }
 }
 
@@ -45,5 +47,11 @@ extension ViewController {
         return HandledMenuItem(itemIdentifier: Actions.copyResponseBody.rawValue,
                                action: { [weak self] in
                                 self?.packetsViewController?.copyResponseBodyAction("")})
+    }
+
+    func toggleProjectsAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.toggleProjects.rawValue,
+                               action: { [weak self] in
+                                self?.toggleProjects("")})
     }
 }
