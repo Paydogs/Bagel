@@ -873,7 +873,7 @@
                                                         <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="weG-2z-gyy" customClass="BaseSplitView" customModule="Bagel__" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="649" height="570"/>
                                                             <subviews>
-                                                                <customView misplaced="YES" id="N0u-KV-KSZ">
+                                                                <customView id="N0u-KV-KSZ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="649" height="285"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
@@ -905,7 +905,7 @@
                                                                         <constraint firstAttribute="trailing" secondItem="zwD-c6-zHt" secondAttribute="trailing" constant="10" id="qIE-TW-cAd"/>
                                                                     </constraints>
                                                                 </customView>
-                                                                <customView misplaced="YES" id="xC7-k8-PGG">
+                                                                <customView id="xC7-k8-PGG">
                                                                     <rect key="frame" x="0.0" y="286" width="649" height="284"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
@@ -956,9 +956,24 @@
                             </splitView>
                             <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-Ua-wHY" customClass="AlertView" customModule="Bagel__" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="800" height="200"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QjN-T6-URk">
+                                        <rect key="frame" x="350" y="77" width="100" height="47"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" alignment="center" title="Label" id="dYM-Q2-Sq8">
+                                            <font key="font" metaFont="system" size="40"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstItem="QjN-T6-URk" firstAttribute="centerX" secondItem="i4c-Ua-wHY" secondAttribute="centerX" id="9ZL-9W-Nlt"/>
                                     <constraint firstAttribute="height" constant="200" id="k6C-F7-1Bx"/>
+                                    <constraint firstItem="QjN-T6-URk" firstAttribute="centerY" secondItem="i4c-Ua-wHY" secondAttribute="centerY" id="s3k-jB-hW2"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="messageView" destination="QjN-T6-URk" id="S0H-k1-fK2"/>
+                                </connections>
                             </customView>
                         </subviews>
                         <constraints>

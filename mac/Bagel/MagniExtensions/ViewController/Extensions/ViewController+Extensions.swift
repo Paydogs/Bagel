@@ -10,6 +10,9 @@ import Foundation
 
 extension ViewController {
     @IBAction func toggleProjects(_ sender: Any) {
+
+        NotificationCenter.default.post(name: BagelNotifications.showAlert,
+                                        object: self.leftPane.isHidden ? "Showing Panel" : "Hiding Panel")
         self.leftPane.isHidden = !self.leftPane.isHidden
     }
 }

@@ -10,10 +10,17 @@ import Cocoa
 import Foundation
 
 class AlertView : NSView {
+
+    @IBOutlet var messageView : NSTextField!
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
         self.wantsLayer = true
         self.layer?.backgroundColor = NSColor.gray.cgColor.copy(alpha: 0.5)
+    }
+
+    func showMessage(message : String?) {
+        self.messageView.stringValue = message ?? ""
     }
 }

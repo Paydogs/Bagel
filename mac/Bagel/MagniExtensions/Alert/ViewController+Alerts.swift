@@ -24,6 +24,7 @@ extension ViewController {
 
     func showAlert(message: String?) {
         alertView.isHidden = false
+        alertView.showMessage(message: message)
 
         NSAnimationContext.runAnimationGroup({ context in
             context.allowsImplicitAnimation = true
