@@ -18,6 +18,7 @@ extension ViewController {
     func getHandledMenuItems() -> [HandledMenuItem] {
         return [clearAction(),
                 reconnectAction(),
+                copyPackageAction(),
                 copyResponseBodyAction(),
                 toggleProjectsAction()]
     }
@@ -40,7 +41,8 @@ extension ViewController {
 
     func copyPackageAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.copyPackage.rawValue,
-                               action: { })
+                               action: { [weak self] in
+                                self?.detailVeiwController?.copyCurrentRepresentationAction("")})
     }
 
     func copyResponseBodyAction() -> HandledMenuItem {
