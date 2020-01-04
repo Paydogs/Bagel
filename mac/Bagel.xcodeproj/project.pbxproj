@@ -175,7 +175,7 @@
 		BCBD86E1215916C9009CBEA7 /* BagelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelController.swift; sourceTree = "<group>"; };
 		BCBD86E3215916E0009CBEA7 /* BagelProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelProjectController.swift; sourceTree = "<group>"; };
 		BCBD86E52159172B009CBEA7 /* BagelDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelDeviceController.swift; sourceTree = "<group>"; };
-		BCD0E023210F5E0D00CE5C7B /* Bagel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bagel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD0E023210F5E0D00CE5C7B /* Bagel++.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bagel++.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD0E026210F5E0D00CE5C7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCD0E028210F5E0D00CE5C7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCD0E02A210F5E0D00CE5C7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -480,7 +480,7 @@
 		BCD0E024210F5E0D00CE5C7B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BCD0E023210F5E0D00CE5C7B /* Bagel.app */,
+				BCD0E023210F5E0D00CE5C7B /* Bagel++.app */,
 				BCD0E035210F5E0D00CE5C7B /* BagelTests.xctest */,
 				BCD0E040210F5E0D00CE5C7B /* BagelUITests.xctest */,
 			);
@@ -756,9 +756,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BCD0E022210F5E0D00CE5C7B /* Bagel */ = {
+		BCD0E022210F5E0D00CE5C7B /* Bagel++ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BCD0E049210F5E0D00CE5C7B /* Build configuration list for PBXNativeTarget "Bagel" */;
+			buildConfigurationList = BCD0E049210F5E0D00CE5C7B /* Build configuration list for PBXNativeTarget "Bagel++" */;
 			buildPhases = (
 				0FE167996174E966D4196302 /* [CP] Check Pods Manifest.lock */,
 				BCD0E01F210F5E0D00CE5C7B /* Sources */,
@@ -770,9 +770,9 @@
 			);
 			dependencies = (
 			);
-			name = Bagel;
+			name = "Bagel++";
 			productName = Bagel;
-			productReference = BCD0E023210F5E0D00CE5C7B /* Bagel.app */;
+			productReference = BCD0E023210F5E0D00CE5C7B /* Bagel++.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BCD0E034210F5E0D00CE5C7B /* BagelTests */ = {
@@ -850,7 +850,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BCD0E022210F5E0D00CE5C7B /* Bagel */,
+				BCD0E022210F5E0D00CE5C7B /* Bagel++ */,
 				BCD0E034210F5E0D00CE5C7B /* BagelTests */,
 				BCD0E03F210F5E0D00CE5C7B /* BagelUITests */,
 			);
@@ -1053,12 +1053,12 @@
 /* Begin PBXTargetDependency section */
 		BCD0E037210F5E0D00CE5C7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BCD0E022210F5E0D00CE5C7B /* Bagel */;
+			target = BCD0E022210F5E0D00CE5C7B /* Bagel++ */;
 			targetProxy = BCD0E036210F5E0D00CE5C7B /* PBXContainerItemProxy */;
 		};
 		BCD0E042210F5E0D00CE5C7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BCD0E022210F5E0D00CE5C7B /* Bagel */;
+			target = BCD0E022210F5E0D00CE5C7B /* Bagel++ */;
 			targetProxy = BCD0E041210F5E0D00CE5C7B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1191,12 +1191,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 64GU57DP44;
 				INFOPLIST_FILE = Bagel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yagiz.Bagel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1210,12 +1212,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 64GU57DP44;
 				INFOPLIST_FILE = Bagel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yagiz.Bagel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1301,7 +1305,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BCD0E049210F5E0D00CE5C7B /* Build configuration list for PBXNativeTarget "Bagel" */ = {
+		BCD0E049210F5E0D00CE5C7B /* Build configuration list for PBXNativeTarget "Bagel++" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BCD0E04A210F5E0D00CE5C7B /* Debug */,

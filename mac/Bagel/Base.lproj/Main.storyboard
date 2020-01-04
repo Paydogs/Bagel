@@ -13,11 +13,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Bagel" id="1Xt-HY-uBw">
+                            <menuItem title="Bagel++" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Bagel" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Bagel++" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Bagel" id="5kV-Vb-QxS">
+                                        <menuItem title="About Bagel++" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -140,7 +140,8 @@
                                                 <action selector="cut:" target="Ady-hI-5gd" id="YJe-68-I9s"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Copy" keyEquivalent="c" id="x3v-GG-iWU">
+                                        <menuItem title="Copy" id="x3v-GG-iWU">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="copy:" target="Ady-hI-5gd" id="G1f-GL-Joy"/>
                                             </connections>
@@ -650,8 +651,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="qsn-DX-ePB"/>
-                                        <menuItem title="Copy Package" identifier="action_copyPackage" id="nmJ-X6-lw3">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Copy Package" keyEquivalent="c" identifier="action_copyPackage" id="nmJ-X6-lw3">
                                             <connections>
                                                 <action selector="handleMenuAction:" target="Ady-hI-5gd" id="uJd-KF-Td8"/>
                                             </connections>
@@ -659,6 +659,19 @@
                                         <menuItem title="Copy Response Body" keyEquivalent="C" identifier="action_copyResponseBody" id="obd-vK-fm5">
                                             <connections>
                                                 <action selector="handleMenuAction:" target="Ady-hI-5gd" id="F5l-Rx-9ae"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="e0F-Yb-rE5"/>
+                                        <menuItem title="Hide Projects" identifier="action_hideProjects" id="L8F-NA-DZj">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="r1Y-KG-IbI"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Devices" identifier="action_hideDevices" id="BAk-hf-ZQJ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="bv2-QP-w9v"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -710,7 +723,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Bagel" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Bagel__" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -772,7 +785,7 @@
         <!--View Controller-->
         <scene sceneID="fR5-2q-KVo">
             <objects>
-                <viewController id="J2d-qx-gCt" customClass="ViewController" customModule="Bagel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J2d-qx-gCt" customClass="ViewController" customModule="Bagel__" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="oAB-hK-plE">
                         <rect key="frame" x="0.0" y="0.0" width="827" height="576"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -846,7 +859,7 @@
                                                     </view>
                                                     <color key="fillColor" white="0.0" alpha="0.040000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </box>
-                                                <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="weG-2z-gyy" customClass="BaseSplitView" customModule="Bagel" customModuleProvider="target">
+                                                <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="weG-2z-gyy" customClass="BaseSplitView" customModule="Bagel__" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="577" height="546"/>
                                                     <subviews>
                                                         <customView id="N0u-KV-KSZ">
@@ -934,7 +947,7 @@
                                     <constraint firstItem="buX-0C-nYy" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="tPC-xY-5Xi"/>
                                 </constraints>
                             </customView>
-                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-Ua-wHY" customClass="AlertView" customModule="Bagel" customModuleProvider="target">
+                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-Ua-wHY" customClass="AlertView" customModule="Bagel__" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="827" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="k6C-F7-1Bx"/>
