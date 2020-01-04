@@ -346,10 +346,23 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="View" id="HyV-fh-RgO">
                                     <items>
-                                        <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
+                                        <menuItem title="Columns" id="dfD-dm-SSm">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Columns" id="Ick-Kq-6xs">
+                                                <items>
+                                                    <menuItem title="Correlation Id" identifier="action_toggleCorrId" id="gsi-Es-z8L">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="handleMenuAction:" target="Ady-hI-5gd" id="D4b-Rm-WLf"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem title="Show Toolbar" keyEquivalent="t" id="OCD-XC-umU">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
-                                                <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="BXY-wc-z0C"/>
+                                                <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="RUT-Zh-se5"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
@@ -526,7 +539,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="1PW-Bk-Eg9" userLabel="Project Pane">
-                                        <rect key="frame" x="0.0" y="0.0" width="139" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="600"/>
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="pum-eU-Zhk">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
@@ -601,7 +614,7 @@
                                         </constraints>
                                     </customView>
                                     <customView misplaced="YES" id="FwA-rN-C0T" userLabel="Packet Pane">
-                                        <rect key="frame" x="140" y="0.0" width="660" height="600"/>
+                                        <rect key="frame" x="149" y="0.0" width="651" height="600"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="buX-0C-nYy">

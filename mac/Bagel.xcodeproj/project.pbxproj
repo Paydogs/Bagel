@@ -107,6 +107,7 @@
 		BE6A1A5723C0439B00F2289D /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A5623C0439B00F2289D /* ViewController+Extensions.swift */; };
 		BE6A1A5F23C05BB200F2289D /* CustomRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A5E23C05BB200F2289D /* CustomRepresentation.swift */; };
 		BE6A1A6423C0F97A00F2289D /* BagelRequestInfo+Extraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A6323C0F97A00F2289D /* BagelRequestInfo+Extraction.swift */; };
+		BE6A1A6623C12B2600F2289D /* CorrelationIdTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A6523C12B2600F2289D /* CorrelationIdTableCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,7 @@
 		BE6A1A5623C0439B00F2289D /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
 		BE6A1A5E23C05BB200F2289D /* CustomRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRepresentation.swift; sourceTree = "<group>"; };
 		BE6A1A6323C0F97A00F2289D /* BagelRequestInfo+Extraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BagelRequestInfo+Extraction.swift"; sourceTree = "<group>"; };
+		BE6A1A6523C12B2600F2289D /* CorrelationIdTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrelationIdTableCellView.swift; sourceTree = "<group>"; };
 		CF8C8D13D8DDE9F8E381A103 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		D3BC1136B2E3E3417E241E77 /* Pods-Bagel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -677,6 +679,7 @@
 		BE5E2BAE23BD8DE0000D6B9C /* MagniExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				BE6A1A6723C1397D00F2289D /* Cell */,
 				BE5E2BB223BD92C2000D6B9C /* MenuHandling */,
 				BE5E2BBF23BDB55C000D6B9C /* Alert */,
 				BE6A1A5423C0437700F2289D /* ViewController */,
@@ -745,6 +748,14 @@
 				BE6A1A5623C0439B00F2289D /* ViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE6A1A6723C1397D00F2289D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BE6A1A6523C12B2600F2289D /* CorrelationIdTableCellView.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DE6C4711091F42DCE97894B2 /* Pods */ = {
@@ -1017,6 +1028,7 @@
 				BE5E2BC523BDB68D000D6B9C /* AlertView.swift in Sources */,
 				BC5E76C9216A64DB000F658D /* Theme.swift in Sources */,
 				BC9C779721634D3400E8ADE8 /* OverviewViewModel.swift in Sources */,
+				BE6A1A6623C12B2600F2289D /* CorrelationIdTableCellView.swift in Sources */,
 				BCFC855021384981001EC6D7 /* BagelPacket.swift in Sources */,
 				BCE21E3E2162C15900A65B29 /* KeyValueListViewController.swift in Sources */,
 				BCA60B4E2162439E00B9DCAD /* URLPacketTableCellView.swift in Sources */,

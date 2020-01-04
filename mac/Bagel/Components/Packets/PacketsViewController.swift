@@ -16,6 +16,7 @@ class PacketsViewController: BaseViewController {
         static let method = "method"
         static let url = "url"
         static let date = "date"
+        static let correlationId = "correlationId"
     }
     
     enum FilterTags: Int {
@@ -140,6 +141,11 @@ extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource {
             return cell
         case TableIdentifiers.date:
             let cell: DatePacketTableCellView = self.tableView.makeView(withOwner: nil)!
+            cell.packet = self.viewModel?.item(at: row)
+            cell.backgroundStyle = .normal
+            return cell
+        case TableIdentifiers.correlationId:
+            let cell: CorrelationIdTableCellView = self.tableView.makeView(withOwner: nil)!
             cell.packet = self.viewModel?.item(at: row)
             cell.backgroundStyle = .normal
             return cell

@@ -6,12 +6,15 @@
 //  Copyright © 2020. Yagiz Lab. All rights reserved.
 //
 
+import Cocoa
+
 enum Actions : String {
     case clear = "action_clear"
     case reconnect = "action_reconnect"
     case copyPackage = "action_copyPackage"
     case copyResponseBody = "action_copyResponseBody"
-    case toggleProjects = "action_toggleProjectPane"
+    case toggleProjectPane = "action_toggleProjectPane"
+    case toggleCorrId = "action_toggleCorrId"
 }
 
 extension ViewController {
@@ -20,7 +23,8 @@ extension ViewController {
                 menuReconnectAction(),
                 menuCopyPacketAction(),
                 menuCopyResponseBodyAction(),
-                menuToggleProjectsAction()]
+                menuToggleProjectPaneAction(),
+                menuToggleCorrelationIdColumnAction()]
     }
 }
 
@@ -42,18 +46,29 @@ extension ViewController {
     func menuCopyPacketAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.copyPackage.rawValue,
                                action: { [weak self] in
-                                self?.copyPacketAction("")})
+                                self?.copyPacketAction("") })
     }
 
     func menuCopyResponseBodyAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.copyResponseBody.rawValue,
                                action: { [weak self] in
-                                self?.copyResponseBodyAction("")})
+                                self?.copyResponseBodyAction("") })
     }
 
-    func menuToggleProjectsAction() -> HandledMenuItem {
-        return HandledMenuItem(itemIdentifier: Actions.toggleProjects.rawValue,
+    func menuToggleProjectPaneAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.toggleProjectPane.rawValue,
                                action: { [weak self] in
-                                self?.toggleProjectPane("")})
+                                self?.toggleProjectPane("") })
+    }
+
+    func menuToggleCorrelationIdColumnAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.toggleCorrId.rawValue,
+                               action: { [weak self] in
+                                let identifier = NSUserInterfaceItemIdentifier("correlationId")
+                                if let idx = self?.packetsViewController?.tableView.column(withIdentifier: identifier) {
+                                    if let column = self?.packetsViewController?.tableView.tableColumns[idx] {
+                                        column.isHidden = !column.isHidden
+                                    }
+                                }})
     }
 }
