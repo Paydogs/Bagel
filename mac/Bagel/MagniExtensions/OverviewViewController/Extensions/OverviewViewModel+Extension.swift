@@ -9,11 +9,18 @@
 import Cocoa
 
 extension OverviewViewModel {
-    func copyBodyToClipboard() {
-        if let messageBody = self.packet?.base64DecodedResponseBody() {
+    func copyRequestBodyToClipboard() {
+        if let responseBody = self.packet?.requestInfo?.getField(.requestBody) {
             NSPasteboard.general.clearContents()
-            NSPasteboard.general.setString(messageBody, forType: .string)
-            NotificationCenter.default.post(name: BagelNotifications.showAlert, object: "Copied")
+            NSPasteboard.general.setString(responseBody, forType: .string)
+            AlertView.displayAlert(message: "Copied")
+        }
+    }
+    func copyResponseBodyToClipboard() {
+        if let responseBody = self.packet?.requestInfo?.getField(.responseBody) {
+            NSPasteboard.general.clearContents()
+            NSPasteboard.general.setString(responseBody, forType: .string)
+            AlertView.displayAlert(message: "Copied")
         }
     }
 }

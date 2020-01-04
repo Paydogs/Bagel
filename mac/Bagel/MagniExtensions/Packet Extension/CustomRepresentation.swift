@@ -18,62 +18,37 @@ class CustomRepresentation: ContentRepresentation  {
 
             var overviewString = ""
 
-            overviewString = overviewString + (requestInfo.requestMethod?.rawValue ?? "")
+            overviewString = overviewString + (requestInfo.getField(.requestMethod) ?? "")
             overviewString = overviewString + " "
-            overviewString = overviewString + (requestInfo.url ?? "")
+            overviewString = overviewString + (requestInfo.getField(.url) ?? "")
 
             overviewString = overviewString + "\n\n"
 
             overviewString = overviewString + "Response Code: "
-            overviewString = overviewString + (requestInfo.statusCode ?? "")
+            overviewString = overviewString + (requestInfo.getField(.statusCode) ?? "")
 
-            if let requestURLString = requestInfo.url, let requestURL = URL(string: requestURLString) {
-
-                let contentRawString = (ContentRepresentationParser.keyValueRepresentation(url: requestURL).rawString ?? "")
-
-                if contentRawString.count > 0 {
-
-                    overviewString = overviewString + "\n\n"
-                    overviewString = overviewString + "URL Parameters:\n"
-                    overviewString = overviewString + contentRawString
-                }
+            if let contentRawString = requestInfo.getField(.urlParameters) {
+                overviewString = overviewString + "\n\n"
+                overviewString = overviewString + "URL Parameters:\n"
+                overviewString = overviewString + contentRawString
             }
 
-            if let requestHeaders = requestInfo.requestHeaders {
-
-                let contentRawString = ContentRepresentationParser.keyValueRepresentation(dictionary: requestHeaders).rawString ?? ""
-
-                if contentRawString.count > 0 {
-
-                    overviewString = overviewString + "\n\n"
-                    overviewString = overviewString + "Request Headers:\n"
-                    overviewString = overviewString + contentRawString
-                }
+            if let contentRawString = requestInfo.getField(.requestHeaders) {
+                overviewString = overviewString + "\n\n"
+                overviewString = overviewString + "Request Headers:\n"
+                overviewString = overviewString + contentRawString
             }
 
-            if let requestBodyData = requestInfo.requestBody?.base64Data {
-
-                let contentRawString = ContentRepresentationParser.dataRepresentation(data: requestBodyData)?.rawString ?? ""
-
-                if contentRawString.count > 0 {
-
-                    overviewString = overviewString + "\n\n"
-                    overviewString = overviewString + "Request Body:\n"
-                    overviewString = overviewString + contentRawString
-                }
+            if let contentRawString = requestInfo.getField(.requestBody) {
+                overviewString = overviewString + "\n\n"
+                overviewString = overviewString + "Request Body:\n"
+                overviewString = overviewString + contentRawString
             }
 
-            if let responseBodyData = requestInfo.responseData?.base64Data {
-
-                let contentRawString = ContentRepresentationParser.dataRepresentation(data: responseBodyData)?.rawString ?? ""
-
-                if contentRawString.count > 0 {
-
-                    overviewString = overviewString + "\n\n"
-                    overviewString = overviewString + "Response Body:\n"
-                    overviewString = overviewString + contentRawString
-                }
-
+            if let contentRawString = requestInfo.getField(.responseBody) {
+                overviewString = overviewString + "\n\n"
+                overviewString = overviewString + "Response Body:\n"
+                overviewString = overviewString + contentRawString
             }
 
             self.rawString = overviewString

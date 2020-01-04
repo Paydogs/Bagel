@@ -101,14 +101,12 @@
 		BE5E2BB123BD8F1D000D6B9C /* MenuHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BB023BD8F1D000D6B9C /* MenuHandling.swift */; };
 		BE5E2BB423BD92E4000D6B9C /* HandledMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BB323BD92E4000D6B9C /* HandledMenuItems.swift */; };
 		BE5E2BB623BDA053000D6B9C /* HandledMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BB523BDA053000D6B9C /* HandledMenuItem.swift */; };
-		BE5E2BBA23BDA9DF000D6B9C /* PacketsViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BB923BDA9DF000D6B9C /* PacketsViewController+Extensions.swift */; };
-		BE5E2BBD23BDAA8F000D6B9C /* BagelPacket+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BBC23BDAA8F000D6B9C /* BagelPacket+Extensions.swift */; };
 		BE5E2BC523BDB68D000D6B9C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BC423BDB68D000D6B9C /* AlertView.swift */; };
 		BE5E2BC723BDBF4D000D6B9C /* ViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BC623BDBF4D000D6B9C /* ViewController+Alerts.swift */; };
 		BE5E2BC923BDC052000D6B9C /* BagelNotifications+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BC823BDC052000D6B9C /* BagelNotifications+Alerts.swift */; };
 		BE6A1A5723C0439B00F2289D /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A5623C0439B00F2289D /* ViewController+Extensions.swift */; };
-		BE6A1A5B23C055FB00F2289D /* DetailsViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A5A23C055FB00F2289D /* DetailsViewController+Extensions.swift */; };
 		BE6A1A5F23C05BB200F2289D /* CustomRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A5E23C05BB200F2289D /* CustomRepresentation.swift */; };
+		BE6A1A6423C0F97A00F2289D /* BagelRequestInfo+Extraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A6323C0F97A00F2289D /* BagelRequestInfo+Extraction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,14 +228,12 @@
 		BE5E2BB023BD8F1D000D6B9C /* MenuHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHandling.swift; sourceTree = "<group>"; };
 		BE5E2BB323BD92E4000D6B9C /* HandledMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandledMenuItems.swift; sourceTree = "<group>"; };
 		BE5E2BB523BDA053000D6B9C /* HandledMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandledMenuItem.swift; sourceTree = "<group>"; };
-		BE5E2BB923BDA9DF000D6B9C /* PacketsViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PacketsViewController+Extensions.swift"; sourceTree = "<group>"; };
-		BE5E2BBC23BDAA8F000D6B9C /* BagelPacket+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BagelPacket+Extensions.swift"; sourceTree = "<group>"; };
 		BE5E2BC423BDB68D000D6B9C /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		BE5E2BC623BDBF4D000D6B9C /* ViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alerts.swift"; sourceTree = "<group>"; };
 		BE5E2BC823BDC052000D6B9C /* BagelNotifications+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BagelNotifications+Alerts.swift"; sourceTree = "<group>"; };
 		BE6A1A5623C0439B00F2289D /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
-		BE6A1A5A23C055FB00F2289D /* DetailsViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsViewController+Extensions.swift"; sourceTree = "<group>"; };
 		BE6A1A5E23C05BB200F2289D /* CustomRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRepresentation.swift; sourceTree = "<group>"; };
+		BE6A1A6323C0F97A00F2289D /* BagelRequestInfo+Extraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BagelRequestInfo+Extraction.swift"; sourceTree = "<group>"; };
 		CF8C8D13D8DDE9F8E381A103 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		D3BC1136B2E3E3417E241E77 /* Pods-Bagel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -681,12 +677,10 @@
 		BE5E2BAE23BD8DE0000D6B9C /* MagniExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				BE6A1A5823C055D600F2289D /* DetailViewController */,
-				BE6A1A5423C0437700F2289D /* ViewController */,
-				BE5E2BBF23BDB55C000D6B9C /* Alert */,
-				BE5E2BBB23BDAA77000D6B9C /* Packet Extension */,
 				BE5E2BB223BD92C2000D6B9C /* MenuHandling */,
-				BE5E2BB823BDA96F000D6B9C /* PacketController */,
+				BE5E2BBF23BDB55C000D6B9C /* Alert */,
+				BE6A1A5423C0437700F2289D /* ViewController */,
+				BE5E2BBB23BDAA77000D6B9C /* Packet Extension */,
 				BE5E2BAF23BD8E32000D6B9C /* OverviewViewController */,
 			);
 			path = MagniExtensions;
@@ -718,29 +712,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		BE5E2BB823BDA96F000D6B9C /* PacketController */ = {
-			isa = PBXGroup;
-			children = (
-				BE5E2BBE23BDB3E0000D6B9C /* Extensions */,
-			);
-			path = PacketController;
-			sourceTree = "<group>";
-		};
 		BE5E2BBB23BDAA77000D6B9C /* Packet Extension */ = {
 			isa = PBXGroup;
 			children = (
-				BE5E2BBC23BDAA8F000D6B9C /* BagelPacket+Extensions.swift */,
 				BE6A1A5E23C05BB200F2289D /* CustomRepresentation.swift */,
+				BE6A1A6323C0F97A00F2289D /* BagelRequestInfo+Extraction.swift */,
 			);
 			path = "Packet Extension";
-			sourceTree = "<group>";
-		};
-		BE5E2BBE23BDB3E0000D6B9C /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BE5E2BB923BDA9DF000D6B9C /* PacketsViewController+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BE5E2BBF23BDB55C000D6B9C /* Alert */ = {
@@ -765,22 +743,6 @@
 			isa = PBXGroup;
 			children = (
 				BE6A1A5623C0439B00F2289D /* ViewController+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		BE6A1A5823C055D600F2289D /* DetailViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BE6A1A5923C055E600F2289D /* Extensions */,
-			);
-			path = DetailViewController;
-			sourceTree = "<group>";
-		};
-		BE6A1A5923C055E600F2289D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BE6A1A5A23C055FB00F2289D /* DetailsViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -991,6 +953,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6A1A6423C0F97A00F2289D /* BagelRequestInfo+Extraction.swift in Sources */,
 				BC7E67EB216E193300E1289E /* DataTextRepresentation.swift in Sources */,
 				BE5E2BC723BDBF4D000D6B9C /* ViewController+Alerts.swift in Sources */,
 				BCEB9AA0217C94B1008BBF3C /* KeyValue.swift in Sources */,
@@ -1018,7 +981,6 @@
 				BCFC854C213848FD001EC6D7 /* BagelProjectModel.swift in Sources */,
 				BC9C77AC216385DC00E8ADE8 /* DataTextViewController.swift in Sources */,
 				BC7E67E7216E181400E1289E /* DataJSONRepresentation.swift in Sources */,
-				BE5E2BBA23BDA9DF000D6B9C /* PacketsViewController+Extensions.swift in Sources */,
 				BC9C77B42163897F00E8ADE8 /* DataJSONViewModel.swift in Sources */,
 				BE025CAE23BD65B40025B6D7 /* OverviewViewModel+Extension.swift in Sources */,
 				BCBD86E4215916E0009CBEA7 /* BagelProjectController.swift in Sources */,
@@ -1042,7 +1004,6 @@
 				BC911A422168C00500B755D4 /* NSColor.swift in Sources */,
 				BC9C779F2163528E00E8ADE8 /* RequestHeadersViewModel.swift in Sources */,
 				BC911A492168F27700B755D4 /* DarkTheme.swift in Sources */,
-				BE6A1A5B23C055FB00F2289D /* DetailsViewController+Extensions.swift in Sources */,
 				BE5E2BC923BDC052000D6B9C /* BagelNotifications+Alerts.swift in Sources */,
 				BC911A442168E10F00B755D4 /* LightTheme.swift in Sources */,
 				BCD0E029210F5E0D00CE5C7B /* ViewController.swift in Sources */,
@@ -1066,7 +1027,6 @@
 				BCBD86E62159172B009CBEA7 /* BagelDeviceController.swift in Sources */,
 				BC9C77C3216398A900E8ADE8 /* RequestBodyViewModel.swift in Sources */,
 				BCFC853921383D79001EC6D7 /* DetailViewController.swift in Sources */,
-				BE5E2BBD23BDAA8F000D6B9C /* BagelPacket+Extensions.swift in Sources */,
 				BCA60B50216256FD00B9DCAD /* BaseTableHeaderView.swift in Sources */,
 				BCA60B482162403F00B9DCAD /* PacketsViewModel.swift in Sources */,
 				BCFC853621383650001EC6D7 /* PacketsViewController.swift in Sources */,

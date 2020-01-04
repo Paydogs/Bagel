@@ -9,7 +9,10 @@
 import Foundation
 
 extension OverviewViewController {
-    @IBAction func copyBodyButtonAction(_ sender: Any) {
-        self.viewModel?.copyBodyToClipboard()
+    @IBAction func copyRequestBodyButtonAction(_ sender: Any) {
+        self.viewModel?.copyRequestBodyToClipboard()
+    }
+    @IBAction func copyResponseBodyButtonAction(_ sender: Any) {
+        self.viewModel?.copyResponseBodyToClipboard()
     }
 }

@@ -9,8 +9,13 @@
 import Cocoa
 import Foundation
 
-class AlertView : NSView {
+extension AlertView {
+    static func displayAlert(message: String) {
+        NotificationCenter.default.post(name: BagelNotifications.showAlert, object: message)
+    }
+}
 
+class AlertView : NSView {
     @IBOutlet var messageView : NSTextField!
 
     required init?(coder: NSCoder) {

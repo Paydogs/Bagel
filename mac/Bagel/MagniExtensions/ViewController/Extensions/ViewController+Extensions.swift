@@ -7,12 +7,37 @@
 //
 
 import Foundation
+import Cocoa
 
 extension ViewController {
-    @IBAction func toggleProjects(_ sender: Any) {
 
-        NotificationCenter.default.post(name: BagelNotifications.showAlert,
-                                        object: self.leftPane.isHidden ? "Showing Panel" : "Hiding Panel")
+    var selectedPacket: BagelPacket? {
+        get {
+            return BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket
+        }
+    }
+    var selectedPacketRequestInfo: BagelRequestInfo? {
+        get {
+            return selectedPacket?.requestInfo
+        }
+    }
+
+    @IBAction func copyPacketAction(_ sender: Any) {
+        let representation = CustomRepresentation(requestInfo: selectedPacketRequestInfo)
+        representation.copyToClipboard()
+        AlertView.displayAlert(message: "Copied")
+    }
+
+    @IBAction func copyResponseBodyAction(_ sender: Any) {
+        if let messageBody = selectedPacketRequestInfo?.getField(.responseBody) {
+            NSPasteboard.general.clearContents()
+            NSPasteboard.general.setString(messageBody, forType: .string)
+            AlertView.displayAlert(message: "Copied")
+        }
+    }
+
+    @IBAction func toggleProjectPane(_ sender: Any) {
+        AlertView.displayAlert(message: self.leftPane.isHidden ? "Showing Panel" : "Hiding Panel")
         self.leftPane.isHidden = !self.leftPane.isHidden
     }
 }

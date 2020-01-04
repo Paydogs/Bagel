@@ -11,49 +11,49 @@ enum Actions : String {
     case reconnect = "action_reconnect"
     case copyPackage = "action_copyPackage"
     case copyResponseBody = "action_copyResponseBody"
-    case toggleProjects = "action_toggleProjects"
+    case toggleProjects = "action_toggleProjectPane"
 }
 
 extension ViewController {
     func getHandledMenuItems() -> [HandledMenuItem] {
-        return [clearAction(),
-                reconnectAction(),
-                copyPackageAction(),
-                copyResponseBodyAction(),
-                toggleProjectsAction()]
+        return [menuClearAction(),
+                menuReconnectAction(),
+                menuCopyPacketAction(),
+                menuCopyResponseBodyAction(),
+                menuToggleProjectsAction()]
     }
 }
 
 extension ViewController {
-    func clearAction() -> HandledMenuItem {
+    func menuClearAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.clear.rawValue,
                                action: { [weak self] in
-                                self?.packetsViewController?.clearButtonAction("") },
+                                self?.packetsViewController?.clearButtonAction("") }, // Original method
                                isValid: { [weak self] in
                                 return self?.packetsViewController?.viewModel?.itemCount() ?? 0 > 0 })
     }
 
-    func reconnectAction() -> HandledMenuItem {
+    func menuReconnectAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.reconnect.rawValue,
                                action: { let publisher = BagelController.shared.publisher
-                                publisher.tryPublishAgain() })
+                                publisher.tryPublishAgain() }) // Original method
     }
 
-    func copyPackageAction() -> HandledMenuItem {
+    func menuCopyPacketAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.copyPackage.rawValue,
                                action: { [weak self] in
-                                self?.detailVeiwController?.copyCurrentRepresentationAction("")})
+                                self?.copyPacketAction("")})
     }
 
-    func copyResponseBodyAction() -> HandledMenuItem {
+    func menuCopyResponseBodyAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.copyResponseBody.rawValue,
                                action: { [weak self] in
-                                self?.packetsViewController?.copyResponseBodyAction("")})
+                                self?.copyResponseBodyAction("")})
     }
 
-    func toggleProjectsAction() -> HandledMenuItem {
+    func menuToggleProjectsAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.toggleProjects.rawValue,
                                action: { [weak self] in
-                                self?.toggleProjects("")})
+                                self?.toggleProjectPane("")})
     }
 }
