@@ -17,6 +17,7 @@ class PacketsViewController: BaseViewController {
         static let url = "url"
         static let date = "date"
         static let correlationId = "correlationId"
+        static let errorCode = "errorCode"
     }
     
     enum FilterTags: Int {
@@ -97,6 +98,12 @@ class PacketsViewController: BaseViewController {
             case TableIdentifiers.date:
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "Date")
                 tableColumn.width = PacketsViewController.dateColumnWidth
+            case TableIdentifiers.correlationId:
+                tableColumn.headerCell = FlatTableHeaderCell(textCell: "CorrelationId")
+                tableColumn.width = PacketsViewController.dateColumnWidth
+            case TableIdentifiers.errorCode:
+                tableColumn.headerCell = FlatTableHeaderCell(textCell: "Error Code")
+                tableColumn.width = PacketsViewController.dateColumnWidth
             default:
                 break
             }
@@ -146,6 +153,11 @@ extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource {
             return cell
         case TableIdentifiers.correlationId:
             let cell: CorrelationIdTableCellView = self.tableView.makeView(withOwner: nil)!
+            cell.packet = self.viewModel?.item(at: row)
+            cell.backgroundStyle = .normal
+            return cell
+        case TableIdentifiers.errorCode:
+            let cell: ErrorCodeTableCellView = self.tableView.makeView(withOwner: nil)!
             cell.packet = self.viewModel?.item(at: row)
             cell.backgroundStyle = .normal
             return cell

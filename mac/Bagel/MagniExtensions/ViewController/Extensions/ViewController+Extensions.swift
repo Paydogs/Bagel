@@ -28,14 +28,6 @@ extension ViewController {
         AlertView.displayAlert(message: "Copied")
     }
 
-    @IBAction func copyResponseBodyAction(_ sender: Any) {
-        if let messageBody = selectedPacketRequestInfo?.getField(.responseBody) {
-            NSPasteboard.general.clearContents()
-            NSPasteboard.general.setString(messageBody, forType: .string)
-            AlertView.displayAlert(message: "Copied")
-        }
-    }
-
     @IBAction func toggleProjectPane(_ sender: Any) {
         AlertView.displayAlert(message: self.leftPane.isHidden ? "Showing Projects Panel" : "Hiding Projects Panel")
         self.leftPane.isHidden = !self.leftPane.isHidden

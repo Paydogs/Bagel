@@ -98,6 +98,7 @@
 		BCFC855021384981001EC6D7 /* BagelPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC854F21384981001EC6D7 /* BagelPacket.swift */; };
 		BE025CAE23BD65B40025B6D7 /* OverviewViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE025CAD23BD65B40025B6D7 /* OverviewViewModel+Extension.swift */; };
 		BE025CB123BD665D0025B6D7 /* OverviewViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE025CB023BD665D0025B6D7 /* OverviewViewController+Extensions.swift */; };
+		BE19451E23C199800055F3B8 /* ErrorCodeTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE19451D23C199800055F3B8 /* ErrorCodeTableCellView.swift */; };
 		BE5E2BB123BD8F1D000D6B9C /* MenuHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BB023BD8F1D000D6B9C /* MenuHandling.swift */; };
 		BE5E2BB423BD92E4000D6B9C /* HandledMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BB323BD92E4000D6B9C /* HandledMenuItems.swift */; };
 		BE5E2BB623BDA053000D6B9C /* HandledMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E2BB523BDA053000D6B9C /* HandledMenuItem.swift */; };
@@ -227,6 +228,7 @@
 		BCFC854F21384981001EC6D7 /* BagelPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelPacket.swift; sourceTree = "<group>"; };
 		BE025CAD23BD65B40025B6D7 /* OverviewViewModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OverviewViewModel+Extension.swift"; sourceTree = "<group>"; };
 		BE025CB023BD665D0025B6D7 /* OverviewViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OverviewViewController+Extensions.swift"; sourceTree = "<group>"; };
+		BE19451D23C199800055F3B8 /* ErrorCodeTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCodeTableCellView.swift; sourceTree = "<group>"; };
 		BE5E2BB023BD8F1D000D6B9C /* MenuHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHandling.swift; sourceTree = "<group>"; };
 		BE5E2BB323BD92E4000D6B9C /* HandledMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandledMenuItems.swift; sourceTree = "<group>"; };
 		BE5E2BB523BDA053000D6B9C /* HandledMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandledMenuItem.swift; sourceTree = "<group>"; };
@@ -754,6 +756,7 @@
 		BE6A1A6723C1397D00F2289D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				BE19451D23C199800055F3B8 /* ErrorCodeTableCellView.swift */,
 				BE6A1A6523C12B2600F2289D /* CorrelationIdTableCellView.swift */,
 			);
 			path = Cells;
@@ -1055,6 +1058,7 @@
 				BE5E2BB623BDA053000D6B9C /* HandledMenuItem.swift in Sources */,
 				BE5E2BC523BDB68D000D6B9C /* AlertView.swift in Sources */,
 				BC5E76C9216A64DB000F658D /* Theme.swift in Sources */,
+				BE19451E23C199800055F3B8 /* ErrorCodeTableCellView.swift in Sources */,
 				BC9C779721634D3400E8ADE8 /* OverviewViewModel.swift in Sources */,
 				BE6A1A6623C12B2600F2289D /* CorrelationIdTableCellView.swift in Sources */,
 				BCFC855021384981001EC6D7 /* BagelPacket.swift in Sources */,

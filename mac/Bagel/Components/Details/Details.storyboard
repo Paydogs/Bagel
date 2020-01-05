@@ -163,7 +163,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Bx-oa-bQb" userLabel="Copy Request">
+                                                    <button toolTip="Copy Request Body to Clipboard (⇧⌘V)" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Bx-oa-bQb" userLabel="Copy Request">
                                                         <rect key="frame" x="10" y="5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="Gfy-Um-qGO"/>
@@ -172,13 +172,15 @@
                                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="CopyRequest" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="7QZ-lW-DUQ" userLabel="Copy Request">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
+                                                            <string key="keyEquivalent">V</string>
+                                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                                         </buttonCell>
                                                         <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                                                         <connections>
                                                             <action selector="copyRequestBodyButtonAction:" target="dbv-oR-1ws" id="IcN-yX-cMO"/>
                                                         </connections>
                                                     </button>
-                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y0G-EE-f7b" userLabel="Copy Response">
+                                                    <button toolTip="Copy Response Body to Clipboard (⇧⌘C)" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y0G-EE-f7b" userLabel="Copy Response">
                                                         <rect key="frame" x="40" y="5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="Xnz-Lf-4Su"/>
@@ -187,6 +189,8 @@
                                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="CopyResponse" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Alw-dp-89L" userLabel="Copy Response">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
+                                                            <string key="keyEquivalent">C</string>
+                                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                                         </buttonCell>
                                                         <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                                                         <connections>
@@ -258,7 +262,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="copyBody" destination="y0G-EE-f7b" id="2WD-WP-aPb"/>
                         <outlet property="copyToClipboardButton" destination="U6O-Tm-OuZ" id="Bis-TZ-SjP"/>
                         <outlet property="curlButton" destination="ze8-fq-lWt" id="FCG-bS-aGL"/>
                         <outlet property="overviewTextView" destination="yGA-r3-ock" id="sTN-fX-keW"/>
@@ -390,7 +393,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel__" customModuleProvider="target">
-                                                                        <rect key="frame" x="138.5" y="1" width="299" height="43"/>
+                                                                        <rect key="frame" x="139" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">

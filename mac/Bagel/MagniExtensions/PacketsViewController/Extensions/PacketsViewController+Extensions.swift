@@ -15,6 +15,7 @@ enum PacketColumn : String {
     case url = "url"
     case date = "date"
     case correlationId = "correlationId"
+    case errorCode = "errorCode"
 }
 
 extension PacketsViewController {

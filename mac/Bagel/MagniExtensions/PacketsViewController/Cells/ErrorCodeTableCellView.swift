@@ -1,5 +1,5 @@
 //
-//  CorrelationIdTableCellView.swift
+//  ErrorCodeTableCellView.swift
 //  Bagel++
 //
 //  Created by Andras Olah on 2020. 01. 04..
@@ -9,11 +9,11 @@
 import Cocoa
 import macOSThemeKit
 
-class CorrelationIdTableCellView: NSTableCellView {
+class ErrorCodeTableCellView: NSTableCellView {
 
     @IBOutlet private weak var titleTextField: NSTextField!
 
-    let correlationIdPattern : String = #"(?<=\"correlationId\\":\\")(.*?)(?=\\",)"#
+    let errorCodePattern : String = #"(?<=\\"code\\":\\")(.*?)(?=\\")"#
 
     var packet: BagelPacket? {
         didSet{
@@ -24,19 +24,19 @@ class CorrelationIdTableCellView: NSTableCellView {
 
     func refresh(with packet: BagelPacket) {
         titleTextField.textColor = ThemeColor.secondaryLabelColor
-        titleTextField.stringValue = getCorrelationId(packet: packet)
+        titleTextField.stringValue = getErrorCode(packet: packet)
     }
 
-    private func getCorrelationId(packet : BagelPacket) -> String {
-        var correlationId = ""
+    private func getErrorCode(packet : BagelPacket) -> String {
+        var errorCode = ""
         if let responseBodyText = packet.requestInfo?.getField(.responseBody) {
-            if let range = responseBodyText.range(of: correlationIdPattern,
+            if let range = responseBodyText.range(of: errorCodePattern,
                                                   options: .regularExpression) {
-                correlationId = String(responseBodyText[range])
+                errorCode = String(responseBodyText[range])
             }
         }
         
-        return correlationId
+        return errorCode
     }
 
 }

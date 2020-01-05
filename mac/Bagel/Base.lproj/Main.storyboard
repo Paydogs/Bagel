@@ -367,10 +367,16 @@
                                                             <action selector="handleMenuAction:" target="Ady-hI-5gd" id="EUQ-a8-u0J"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Correlation Id" onStateImage="NSMenuOnStateTemplate" identifier="action_toggleCorrId" id="DnS-uN-Oua">
+                                                    <menuItem title="Correlation Id" onStateImage="NSMenuOnStateTemplate" enabled="NO" identifier="action_toggleCorrId" id="DnS-uN-Oua">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="handleMenuAction:" target="Ady-hI-5gd" id="RsF-Oc-7SF"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Error Code" onStateImage="NSMenuOnStateTemplate" enabled="NO" identifier="action_toggleErrorCode" id="EO7-ee-gPy">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="handleMenuAction:" target="Ady-hI-5gd" id="X9i-5s-1jf"/>
                                                         </connections>
                                                     </menuItem>
                                                 </items>
@@ -396,21 +402,10 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="YgI-s6-MP3"/>
-                                        <menuItem title="Clear" keyEquivalent="K" identifier="action_clear" id="tkE-AI-6nI">
-                                            <connections>
-                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="Oif-3t-yo3"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="qsn-DX-ePB"/>
-                                        <menuItem title="Copy" keyEquivalent="c" identifier="action_copyPackage" id="nmJ-X6-lw3">
+                                        <menuItem title="Copy Package Text" keyEquivalent="c" identifier="action_copyPackage" id="nmJ-X6-lw3">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
                                                 <action selector="handleMenuAction:" target="Ady-hI-5gd" id="uJd-KF-Td8"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Copy Response Body" keyEquivalent="C" identifier="action_copyResponseBody" id="obd-vK-fm5">
-                                            <connections>
-                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="F5l-Rx-9ae"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="e0F-Yb-rE5"/>
@@ -548,7 +543,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="1PW-Bk-Eg9" userLabel="Project Pane">
-                                        <rect key="frame" x="0.0" y="0.0" width="148" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="pum-eU-Zhk">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
@@ -622,8 +617,8 @@
                                             <constraint firstItem="pum-eU-Zhk" firstAttribute="top" secondItem="1PW-Bk-Eg9" secondAttribute="top" id="pan-eJ-wKw"/>
                                         </constraints>
                                     </customView>
-                                    <customView misplaced="YES" id="FwA-rN-C0T" userLabel="Packet Pane">
-                                        <rect key="frame" x="149" y="0.0" width="651" height="600"/>
+                                    <customView id="FwA-rN-C0T" userLabel="Packet Pane">
+                                        <rect key="frame" x="151" y="0.0" width="649" height="600"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="buX-0C-nYy">

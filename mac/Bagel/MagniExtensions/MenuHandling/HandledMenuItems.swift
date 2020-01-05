@@ -9,10 +9,8 @@
 import Cocoa
 
 enum Actions : String {
-    case clear = "action_clear"
     case reconnect = "action_reconnect"
     case copyPackage = "action_copyPackage"
-    case copyResponseBody = "action_copyResponseBody"
     case toggleProjectPane = "action_toggleProjectPane"
     case togglePackagePane = "action_togglePackagePane"
     case toggleDetailsPane = "action_toggleDetailsPane"
@@ -21,14 +19,13 @@ enum Actions : String {
     case toggleUrl = "action_toggleUrl"
     case toggleDate = "action_toggleDate"
     case toggleCorrId = "action_toggleCorrId"
+    case toggleErrorCode = "action_toggleErrorCode"
 }
 
 extension ViewController {
     func getHandledMenuItems() -> [HandledMenuItem] {
-        return [menuClearAction(),
-                menuReconnectAction(),
+        return [menuReconnectAction(),
                 menuCopyPacketAction(),
-                menuCopyResponseBodyAction(),
                 menuToggleProjectPaneAction(),
                 menuTogglePackagePaneAction(),
                 menuToggleDetailsPaneAction(),
@@ -36,16 +33,12 @@ extension ViewController {
                 menuToggleMethodColumnAction(),
                 menuToggleUrlColumnAction(),
                 menuToggleDateColumnAction(),
-                menuToggleCorrelationIdColumnAction()]
+                menuToggleCorrelationIdColumnAction(),
+                menuToggleErrorCodeColumnAction()]
     }
 }
 
 extension ViewController {
-    func menuClearAction() -> HandledMenuItem {
-        return HandledMenuItem(itemIdentifier: Actions.clear.rawValue,
-                               action: { self.packetsViewController?.clearButtonAction("") }, // Original method
-                               isValid: { return self.packetsViewController?.viewModel?.itemCount() ?? 0 > 0 }) }
-
     func menuReconnectAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.reconnect.rawValue,
                                action: { let publisher = BagelController.shared.publisher
@@ -55,11 +48,6 @@ extension ViewController {
     func menuCopyPacketAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.copyPackage.rawValue,
                                action: { self.copyPacketAction("") })
-    }
-
-    func menuCopyResponseBodyAction() -> HandledMenuItem {
-        return HandledMenuItem(itemIdentifier: Actions.copyResponseBody.rawValue,
-                               action: { self.copyResponseBodyAction("") })
     }
 
     func menuToggleProjectPaneAction() -> HandledMenuItem {
@@ -116,6 +104,14 @@ extension ViewController {
                                action: { self.packetsViewController?.toggleColumn(identifier: .correlationId) },
                                state: {
                                 let column = self.packetsViewController?.columnForIdentifier(identifier: .correlationId)
+                                return self.stateForVisibility(column: column) })
+    }
+
+    func menuToggleErrorCodeColumnAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.toggleErrorCode.rawValue,
+                               action: { self.packetsViewController?.toggleColumn(identifier: .errorCode) },
+                               state: {
+                                let column = self.packetsViewController?.columnForIdentifier(identifier: .errorCode)
                                 return self.stateForVisibility(column: column) })
     }
 
