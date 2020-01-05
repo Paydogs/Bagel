@@ -23,6 +23,8 @@ class ViewController: NSViewController, NSUserInterfaceValidations {
     @IBOutlet weak var mainSplitView: NSSplitView!
     @IBOutlet weak var leftPane: NSView!
     @IBOutlet weak var rightPane: NSView!
+    @IBOutlet weak var packagePane: NSView!
+    @IBOutlet weak var detailsPane: NSView!
 
     @IBOutlet weak var alertView: AlertView!
     

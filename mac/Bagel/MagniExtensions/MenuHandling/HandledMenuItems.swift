@@ -14,6 +14,8 @@ enum Actions : String {
     case copyPackage = "action_copyPackage"
     case copyResponseBody = "action_copyResponseBody"
     case toggleProjectPane = "action_toggleProjectPane"
+    case togglePackagePane = "action_togglePackagePane"
+    case toggleDetailsPane = "action_toggleDetailsPane"
     case toggleStatus = "action_toggleStatus"
     case toggleMethod = "action_toggleMethod"
     case toggleUrl = "action_toggleUrl"
@@ -28,6 +30,8 @@ extension ViewController {
                 menuCopyPacketAction(),
                 menuCopyResponseBodyAction(),
                 menuToggleProjectPaneAction(),
+                menuTogglePackagePaneAction(),
+                menuToggleDetailsPaneAction(),
                 menuToggleStatusColumnAction(),
                 menuToggleMethodColumnAction(),
                 menuToggleUrlColumnAction(),
@@ -61,6 +65,16 @@ extension ViewController {
     func menuToggleProjectPaneAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.toggleProjectPane.rawValue,
                                action: { self.toggleProjectPane("") })
+    }
+
+    func menuTogglePackagePaneAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.togglePackagePane.rawValue,
+                               action: { self.togglePackagePane("") })
+    }
+
+    func menuToggleDetailsPaneAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.toggleDetailsPane.rawValue,
+                               action: { self.toggleDetailsPane("") })
     }
 }
 

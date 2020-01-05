@@ -198,11 +198,7 @@
                                                             <action selector="performFindPanelAction:" target="Ady-hI-5gd" id="U76-nv-p5D"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Jump to Selection" keyEquivalent="j" id="S0p-oC-mLd">
-                                                        <connections>
-                                                            <action selector="centerSelectionInVisibleArea:" target="Ady-hI-5gd" id="IOG-6D-g5B"/>
-                                                        </connections>
-                                                    </menuItem>
+                                                    <menuItem title="Jump to Selection" keyEquivalent="j" id="S0p-oC-mLd"/>
                                                 </items>
                                             </menu>
                                         </menuItem>
@@ -310,9 +306,6 @@
                                                     </menuItem>
                                                     <menuItem title="Capitalize" id="UEZ-Bs-lqG">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="capitalizeWord:" target="Ady-hI-5gd" id="26H-TL-nsh"/>
-                                                        </connections>
                                                     </menuItem>
                                                 </items>
                                             </menu>
@@ -383,25 +376,7 @@
                                                 </items>
                                             </menu>
                                         </menuItem>
-                                        <menuItem title="Show Toolbar" keyEquivalent="t" id="OCD-XC-umU">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="RUT-Zh-se5"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="runToolbarCustomizationPalette:" target="Ady-hI-5gd" id="pQI-g3-MTW"/>
-                                            </connections>
-                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
-                                        <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
-                                            </connections>
-                                        </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
@@ -442,6 +417,16 @@
                                         <menuItem title="Toggle Project Pane" keyEquivalent="1" identifier="action_toggleProjectPane" id="L8F-NA-DZj">
                                             <connections>
                                                 <action selector="handleMenuAction:" target="Ady-hI-5gd" id="r1Y-KG-IbI"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Toggle Package Pane" keyEquivalent="2" identifier="action_togglePackagePane" id="Ck9-v2-Bzd">
+                                            <connections>
+                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="woE-F4-gCY"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Toggle Details Pane" keyEquivalent="3" identifier="action_toggleDetailsPane" id="JSQ-EV-XzB">
+                                            <connections>
+                                                <action selector="handleMenuAction:" target="Ady-hI-5gd" id="t3o-FI-CtJ"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -765,9 +750,11 @@
                     </view>
                     <connections>
                         <outlet property="alertView" destination="i4c-Ua-wHY" id="efi-Xk-3NL"/>
+                        <outlet property="detailsPane" destination="xC7-k8-PGG" id="YwF-VH-wrQ"/>
                         <outlet property="devicesBackgroundBox" destination="VBx-aB-Jng" id="Cd2-Nz-3h1"/>
                         <outlet property="leftPane" destination="1PW-Bk-Eg9" id="LP6-JS-8Fr"/>
                         <outlet property="mainSplitView" destination="ubs-Qr-jR6" id="vS2-hT-Tpe"/>
+                        <outlet property="packagePane" destination="N0u-KV-KSZ" id="UD7-CY-xfn"/>
                         <outlet property="packetsBackgroundBox" destination="buX-0C-nYy" id="5vI-qx-nyB"/>
                         <outlet property="projectsBackgroundBox" destination="MdL-Ur-DWv" id="edN-fP-mIh"/>
                         <outlet property="rightPane" destination="FwA-rN-C0T" id="Qha-3h-Ib2"/>
