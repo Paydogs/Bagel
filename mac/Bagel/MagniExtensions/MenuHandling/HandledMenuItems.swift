@@ -14,6 +14,10 @@ enum Actions : String {
     case copyPackage = "action_copyPackage"
     case copyResponseBody = "action_copyResponseBody"
     case toggleProjectPane = "action_toggleProjectPane"
+    case toggleStatus = "action_toggleStatus"
+    case toggleMethod = "action_toggleMethod"
+    case toggleUrl = "action_toggleUrl"
+    case toggleDate = "action_toggleDate"
     case toggleCorrId = "action_toggleCorrId"
 }
 
@@ -24,6 +28,10 @@ extension ViewController {
                 menuCopyPacketAction(),
                 menuCopyResponseBodyAction(),
                 menuToggleProjectPaneAction(),
+                menuToggleStatusColumnAction(),
+                menuToggleMethodColumnAction(),
+                menuToggleUrlColumnAction(),
+                menuToggleDateColumnAction(),
                 menuToggleCorrelationIdColumnAction()]
     }
 }
@@ -31,11 +39,8 @@ extension ViewController {
 extension ViewController {
     func menuClearAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.clear.rawValue,
-                               action: { [weak self] in
-                                self?.packetsViewController?.clearButtonAction("") }, // Original method
-                               isValid: { [weak self] in
-                                return self?.packetsViewController?.viewModel?.itemCount() ?? 0 > 0 })
-    }
+                               action: { self.packetsViewController?.clearButtonAction("") }, // Original method
+                               isValid: { return self.packetsViewController?.viewModel?.itemCount() ?? 0 > 0 }) }
 
     func menuReconnectAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.reconnect.rawValue,
@@ -45,30 +50,64 @@ extension ViewController {
 
     func menuCopyPacketAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.copyPackage.rawValue,
-                               action: { [weak self] in
-                                self?.copyPacketAction("") })
+                               action: { self.copyPacketAction("") })
     }
 
     func menuCopyResponseBodyAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.copyResponseBody.rawValue,
-                               action: { [weak self] in
-                                self?.copyResponseBodyAction("") })
+                               action: { self.copyResponseBodyAction("") })
     }
 
     func menuToggleProjectPaneAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.toggleProjectPane.rawValue,
-                               action: { [weak self] in
-                                self?.toggleProjectPane("") })
+                               action: { self.toggleProjectPane("") })
+    }
+}
+
+extension ViewController {
+    func menuToggleStatusColumnAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.toggleStatus.rawValue,
+                               action: { self.packetsViewController?.toggleColumn(identifier: .statusCode) },
+                               state: {
+                                let column = self.packetsViewController?.columnForIdentifier(identifier: .statusCode)
+                                return self.stateForVisibility(column: column) })
+    }
+
+    func menuToggleMethodColumnAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.toggleMethod.rawValue,
+                               action: { self.packetsViewController?.toggleColumn(identifier: .method) },
+                               state: {
+                                let column = self.packetsViewController?.columnForIdentifier(identifier: .method)
+                                return self.stateForVisibility(column: column) })
+    }
+
+    func menuToggleUrlColumnAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.toggleUrl.rawValue,
+                               action: { self.packetsViewController?.toggleColumn(identifier: .url) },
+                               state: {
+                                let column = self.packetsViewController?.columnForIdentifier(identifier: .url)
+                                return self.stateForVisibility(column: column) })
+    }
+
+    func menuToggleDateColumnAction() -> HandledMenuItem {
+        return HandledMenuItem(itemIdentifier: Actions.toggleDate.rawValue,
+                               action: { self.packetsViewController?.toggleColumn(identifier: .date) },
+                               state: {
+                                let column = self.packetsViewController?.columnForIdentifier(identifier: .date)
+                                return self.stateForVisibility(column: column) })
     }
 
     func menuToggleCorrelationIdColumnAction() -> HandledMenuItem {
         return HandledMenuItem(itemIdentifier: Actions.toggleCorrId.rawValue,
-                               action: { [weak self] in
-                                let identifier = NSUserInterfaceItemIdentifier("correlationId")
-                                if let idx = self?.packetsViewController?.tableView.column(withIdentifier: identifier) {
-                                    if let column = self?.packetsViewController?.tableView.tableColumns[idx] {
-                                        column.isHidden = !column.isHidden
-                                    }
-                                }})
+                               action: { self.packetsViewController?.toggleColumn(identifier: .correlationId) },
+                               state: {
+                                let column = self.packetsViewController?.columnForIdentifier(identifier: .correlationId)
+                                return self.stateForVisibility(column: column) })
+    }
+
+    func stateForVisibility(column: NSTableColumn?) -> NSControl.StateValue {
+        if let column = column {
+            return column.isHidden ? NSControl.StateValue.off : NSControl.StateValue.on
+        } else { return NSControl.StateValue.off }
     }
 }

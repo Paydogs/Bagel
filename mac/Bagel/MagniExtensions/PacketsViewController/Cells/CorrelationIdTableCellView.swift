@@ -13,6 +13,8 @@ class CorrelationIdTableCellView: NSTableCellView {
 
     @IBOutlet private weak var titleTextField: NSTextField!
 
+    let correlationIdPattern : String = #"(?<=\"correlationId\\\":\\\")(.*?)(?=\\\",)"#
+
     var packet: BagelPacket? {
         didSet{
           guard let packet = packet else { return }
@@ -28,13 +30,12 @@ class CorrelationIdTableCellView: NSTableCellView {
     private func getCorrelationId(packet : BagelPacket) -> String {
         var correlationId = ""
         if let responseBodyText = packet.requestInfo?.getField(.responseBody) {
-            if let range = responseBodyText.range(of: #"(?<=\"correlationId\\\":\\\")(.*?)(?=\\\",)"#,
+            if let range = responseBodyText.range(of: correlationIdPattern,
                                                   options: .regularExpression) {
                 correlationId = String(responseBodyText[range])
             }
         }
         
-
         return correlationId
     }
 

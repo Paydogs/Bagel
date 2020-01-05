@@ -350,10 +350,34 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Columns" id="Ick-Kq-6xs">
                                                 <items>
-                                                    <menuItem title="Correlation Id" identifier="action_toggleCorrId" id="gsi-Es-z8L">
+                                                    <menuItem title="Status" onStateImage="NSMenuOnStateTemplate" identifier="action_toggleStatus" id="gsi-Es-z8L">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="handleMenuAction:" target="Ady-hI-5gd" id="D4b-Rm-WLf"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Method" onStateImage="NSMenuOnStateTemplate" identifier="action_toggleMethod" id="yen-v5-vPS">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="handleMenuAction:" target="Ady-hI-5gd" id="rG2-u9-B6N"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Url" onStateImage="NSMenuOnStateTemplate" identifier="action_toggleUrl" id="82N-w4-SC8">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="handleMenuAction:" target="Ady-hI-5gd" id="JhH-x9-WXb"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Date" onStateImage="NSMenuOnStateTemplate" identifier="action_toggleDate" id="Lk5-U0-tSx">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="handleMenuAction:" target="Ady-hI-5gd" id="EUQ-a8-u0J"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Correlation Id" onStateImage="NSMenuOnStateTemplate" identifier="action_toggleCorrId" id="DnS-uN-Oua">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="handleMenuAction:" target="Ady-hI-5gd" id="RsF-Oc-7SF"/>
                                                         </connections>
                                                     </menuItem>
                                                 </items>
@@ -754,4 +778,7 @@
             <point key="canvasLocation" x="75.5" y="866"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSMenuOnStateTemplate" width="12" height="12"/>
+    </resources>
 </document>

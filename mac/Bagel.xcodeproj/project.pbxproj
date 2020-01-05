@@ -108,6 +108,7 @@
 		BE6A1A5F23C05BB200F2289D /* CustomRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A5E23C05BB200F2289D /* CustomRepresentation.swift */; };
 		BE6A1A6423C0F97A00F2289D /* BagelRequestInfo+Extraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A6323C0F97A00F2289D /* BagelRequestInfo+Extraction.swift */; };
 		BE6A1A6623C12B2600F2289D /* CorrelationIdTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A1A6523C12B2600F2289D /* CorrelationIdTableCellView.swift */; };
+		BED931BC23C169F1003EEFB2 /* PacketsViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED931BB23C169F1003EEFB2 /* PacketsViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +237,7 @@
 		BE6A1A5E23C05BB200F2289D /* CustomRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRepresentation.swift; sourceTree = "<group>"; };
 		BE6A1A6323C0F97A00F2289D /* BagelRequestInfo+Extraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BagelRequestInfo+Extraction.swift"; sourceTree = "<group>"; };
 		BE6A1A6523C12B2600F2289D /* CorrelationIdTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrelationIdTableCellView.swift; sourceTree = "<group>"; };
+		BED931BB23C169F1003EEFB2 /* PacketsViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PacketsViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CF8C8D13D8DDE9F8E381A103 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		D3BC1136B2E3E3417E241E77 /* Pods-Bagel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -679,11 +681,11 @@
 		BE5E2BAE23BD8DE0000D6B9C /* MagniExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				BE6A1A6723C1397D00F2289D /* Cell */,
 				BE5E2BB223BD92C2000D6B9C /* MenuHandling */,
 				BE5E2BBF23BDB55C000D6B9C /* Alert */,
-				BE6A1A5423C0437700F2289D /* ViewController */,
 				BE5E2BBB23BDAA77000D6B9C /* Packet Extension */,
+				BE6A1A5423C0437700F2289D /* ViewController */,
+				BED931B923C169BE003EEFB2 /* PacketsViewController */,
 				BE5E2BAF23BD8E32000D6B9C /* OverviewViewController */,
 			);
 			path = MagniExtensions;
@@ -727,9 +729,8 @@
 		BE5E2BBF23BDB55C000D6B9C /* Alert */ = {
 			isa = PBXGroup;
 			children = (
+				BED931BD23C16A1B003EEFB2 /* Extensions */,
 				BE5E2BC423BDB68D000D6B9C /* AlertView.swift */,
-				BE5E2BC623BDBF4D000D6B9C /* ViewController+Alerts.swift */,
-				BE5E2BC823BDC052000D6B9C /* BagelNotifications+Alerts.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -750,12 +751,38 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		BE6A1A6723C1397D00F2289D /* Cell */ = {
+		BE6A1A6723C1397D00F2289D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				BE6A1A6523C12B2600F2289D /* CorrelationIdTableCellView.swift */,
 			);
-			path = Cell;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BED931B923C169BE003EEFB2 /* PacketsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE6A1A6723C1397D00F2289D /* Cells */,
+				BED931BA23C169E0003EEFB2 /* Extensions */,
+			);
+			path = PacketsViewController;
+			sourceTree = "<group>";
+		};
+		BED931BA23C169E0003EEFB2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BED931BB23C169F1003EEFB2 /* PacketsViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BED931BD23C16A1B003EEFB2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE5E2BC623BDBF4D000D6B9C /* ViewController+Alerts.swift */,
+				BE5E2BC823BDC052000D6B9C /* BagelNotifications+Alerts.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DE6C4711091F42DCE97894B2 /* Pods */ = {
@@ -984,6 +1011,7 @@
 				BCFC85332138354D001EC6D7 /* DevicesViewController.swift in Sources */,
 				BE5E2BB123BD8F1D000D6B9C /* MenuHandling.swift in Sources */,
 				BC9C77A82163805000E8ADE8 /* DataViewModel.swift in Sources */,
+				BED931BC23C169F1003EEFB2 /* PacketsViewController+Extensions.swift in Sources */,
 				BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */,
 				BC32643621738AF0006452FE /* KeyValueRepresentation.swift in Sources */,
 				BC9C77C02163981F00E8ADE8 /* ResponseHeadersViewModel.swift in Sources */,

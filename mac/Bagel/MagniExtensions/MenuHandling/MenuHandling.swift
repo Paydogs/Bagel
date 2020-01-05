@@ -13,6 +13,7 @@ extension ViewController {
     func validateMenuItem(_ item: NSValidatedUserInterfaceItem) -> Bool {
         if let menuItem = item as? NSMenuItem, let identifier = menuItem.identifier?.rawValue {
             if let action = getHandledMenuItemForIdentifier(identifier) {
+                menuItem.state = action.state()
                 return action.isValid()
             }
         }
