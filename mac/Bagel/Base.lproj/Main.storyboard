@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -621,7 +621,7 @@
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -743,175 +743,199 @@
                         <rect key="frame" x="0.0" y="0.0" width="827" height="576"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="pum-eU-Zhk">
+                            <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ws1-tG-eUr">
                                 <rect key="frame" x="0.0" y="0.0" width="827" height="576"/>
                                 <subviews>
-                                    <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="MdL-Ur-DWv">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="576"/>
-                                        <view key="contentView" id="7LK-uA-7fl">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="576"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="JNW-Zr-M91">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="576"/>
-                                                    <connections>
-                                                        <segue destination="64I-P0-Mwn" kind="embed" identifier="ProjectsViewController" id="mj0-Pg-AEU"/>
-                                                    </connections>
-                                                </containerView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="JNW-Zr-M91" firstAttribute="top" secondItem="7LK-uA-7fl" secondAttribute="top" id="BpL-s1-y8R"/>
-                                                <constraint firstAttribute="bottom" secondItem="JNW-Zr-M91" secondAttribute="bottom" id="GoM-7s-Cpn"/>
-                                                <constraint firstItem="JNW-Zr-M91" firstAttribute="leading" secondItem="7LK-uA-7fl" secondAttribute="leading" id="s1A-Jj-Af2"/>
-                                                <constraint firstAttribute="trailing" secondItem="JNW-Zr-M91" secondAttribute="trailing" id="viV-ei-e9W"/>
-                                            </constraints>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="3LA-7n-ylP"/>
-                                        </constraints>
-                                        <color key="borderColor" white="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="fillColor" white="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </box>
-                                    <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="VBx-aB-Jng">
-                                        <rect key="frame" x="100" y="0.0" width="150" height="576"/>
-                                        <view key="contentView" id="0Go-FS-q3v">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="576"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="vcS-ZR-URn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="576"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="h5g-mo-9t9"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <segue destination="QSc-Y4-5Cx" kind="embed" identifier="DevicesViewController" id="GKl-dZ-2r0"/>
-                                                    </connections>
-                                                </containerView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="vcS-ZR-URn" firstAttribute="top" secondItem="0Go-FS-q3v" secondAttribute="top" id="7v7-1V-gb5"/>
-                                                <constraint firstAttribute="trailing" secondItem="vcS-ZR-URn" secondAttribute="trailing" id="CGO-Zy-TAs"/>
-                                                <constraint firstItem="vcS-ZR-URn" firstAttribute="leading" secondItem="0Go-FS-q3v" secondAttribute="leading" id="JKd-Yd-s8k"/>
-                                                <constraint firstAttribute="bottom" secondItem="vcS-ZR-URn" secondAttribute="bottom" id="khv-v2-Yoi"/>
-                                            </constraints>
-                                        </view>
-                                        <color key="borderColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="fillColor" name="underPageBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </box>
-                                    <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="buX-0C-nYy">
-                                        <rect key="frame" x="250" y="0.0" width="577" height="576"/>
-                                        <view key="contentView" id="cvt-Xd-vI3">
-                                            <rect key="frame" x="0.0" y="0.0" width="577" height="576"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="fsy-NS-UAk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="577" height="576"/>
-                                                    <view key="contentView" id="0tW-SS-WiY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="577" height="576"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    </view>
-                                                    <color key="fillColor" white="0.0" alpha="0.040000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </box>
-                                                <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="weG-2z-gyy" customClass="BaseSplitView" customModule="Bagel" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="577" height="546"/>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="lc8-pQ-Cgm" userLabel="Project split panel">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="576"/>
+                                        <subviews>
+                                            <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="MdL-Ur-DWv">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="576"/>
+                                                <view key="contentView" id="7LK-uA-7fl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="576"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <customView id="N0u-KV-KSZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="577" height="273"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="zwD-c6-zHt">
-                                                                    <rect key="frame" x="10" y="10" width="557" height="263"/>
-                                                                    <connections>
-                                                                        <segue destination="qMc-Mv-va5" kind="embed" identifier="PacketsViewController" id="gBm-nl-eRp"/>
-                                                                    </connections>
-                                                                </containerView>
-                                                                <box boxType="custom" borderWidth="0.0" cornerRadius="2" translatesAutoresizingMaskIntoConstraints="NO" id="r9w-eG-O30">
-                                                                    <rect key="frame" x="279" y="-2" width="20" height="4"/>
-                                                                    <view key="contentView" id="74A-Sd-x9X">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="4"/>
-                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                    </view>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="20" id="DLa-4M-5ZF"/>
-                                                                        <constraint firstAttribute="height" constant="4" id="zqP-Qi-1ez"/>
-                                                                    </constraints>
-                                                                    <color key="fillColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                </box>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="zwD-c6-zHt" firstAttribute="top" secondItem="N0u-KV-KSZ" secondAttribute="top" id="3jg-XH-TDe"/>
-                                                                <constraint firstItem="r9w-eG-O30" firstAttribute="centerX" secondItem="N0u-KV-KSZ" secondAttribute="centerX" id="9d7-Sz-1gK"/>
-                                                                <constraint firstAttribute="bottom" secondItem="zwD-c6-zHt" secondAttribute="bottom" constant="10" id="G0o-1e-Q0R"/>
-                                                                <constraint firstAttribute="bottom" secondItem="r9w-eG-O30" secondAttribute="bottom" constant="-2" id="bPa-pP-71i"/>
-                                                                <constraint firstItem="zwD-c6-zHt" firstAttribute="leading" secondItem="N0u-KV-KSZ" secondAttribute="leading" constant="10" id="lfx-kj-AHm"/>
-                                                                <constraint firstAttribute="trailing" secondItem="zwD-c6-zHt" secondAttribute="trailing" constant="10" id="qIE-TW-cAd"/>
-                                                            </constraints>
-                                                        </customView>
-                                                        <customView id="xC7-k8-PGG">
-                                                            <rect key="frame" x="0.0" y="274" width="577" height="272"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="6vH-jg-UZJ">
-                                                                    <rect key="frame" x="10" y="10" width="557" height="252"/>
-                                                                    <connections>
-                                                                        <segue destination="sEX-Ye-dwa" kind="embed" identifier="DetailViewController" id="x3Z-RC-o5A"/>
-                                                                    </connections>
-                                                                </containerView>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="6vH-jg-UZJ" firstAttribute="top" secondItem="xC7-k8-PGG" secondAttribute="top" constant="10" id="Eid-7F-Fp9"/>
-                                                                <constraint firstItem="6vH-jg-UZJ" firstAttribute="leading" secondItem="xC7-k8-PGG" secondAttribute="leading" constant="10" id="hbm-K3-WWV"/>
-                                                                <constraint firstAttribute="bottom" secondItem="6vH-jg-UZJ" secondAttribute="bottom" constant="10" id="jo1-4E-7xd"/>
-                                                                <constraint firstAttribute="trailing" secondItem="6vH-jg-UZJ" secondAttribute="trailing" constant="10" id="qTo-ZG-rr6"/>
-                                                            </constraints>
-                                                        </customView>
+                                                        <containerView translatesAutoresizingMaskIntoConstraints="NO" id="JNW-Zr-M91">
+                                                            <rect key="frame" x="0.0" y="0.0" width="197" height="576"/>
+                                                            <connections>
+                                                                <segue destination="64I-P0-Mwn" kind="embed" identifier="ProjectsViewController" id="mj0-Pg-AEU"/>
+                                                            </connections>
+                                                        </containerView>
                                                     </subviews>
-                                                    <holdingPriorities>
-                                                        <real value="250"/>
-                                                        <real value="250"/>
-                                                    </holdingPriorities>
-                                                </splitView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="weG-2z-gyy" firstAttribute="top" secondItem="cvt-Xd-vI3" secondAttribute="top" constant="30" id="0pE-x8-EVy"/>
-                                                <constraint firstAttribute="bottom" secondItem="fsy-NS-UAk" secondAttribute="bottom" id="6Xd-zi-LrY"/>
-                                                <constraint firstAttribute="bottom" secondItem="weG-2z-gyy" secondAttribute="bottom" id="7Bp-TF-Oq5"/>
-                                                <constraint firstItem="fsy-NS-UAk" firstAttribute="leading" secondItem="cvt-Xd-vI3" secondAttribute="leading" id="Jzq-Wo-WMQ"/>
-                                                <constraint firstItem="fsy-NS-UAk" firstAttribute="top" secondItem="cvt-Xd-vI3" secondAttribute="top" id="RpO-jO-fz7"/>
-                                                <constraint firstAttribute="trailing" secondItem="weG-2z-gyy" secondAttribute="trailing" id="UsK-KI-v3a"/>
-                                                <constraint firstAttribute="trailing" secondItem="fsy-NS-UAk" secondAttribute="trailing" id="Vpd-MM-bDd"/>
-                                                <constraint firstItem="weG-2z-gyy" firstAttribute="leading" secondItem="cvt-Xd-vI3" secondAttribute="leading" id="wjf-1p-JLN"/>
-                                            </constraints>
-                                        </view>
-                                        <color key="borderColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </box>
+                                                    <constraints>
+                                                        <constraint firstItem="JNW-Zr-M91" firstAttribute="top" secondItem="7LK-uA-7fl" secondAttribute="top" id="BpL-s1-y8R"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JNW-Zr-M91" secondAttribute="bottom" id="GoM-7s-Cpn"/>
+                                                        <constraint firstItem="JNW-Zr-M91" firstAttribute="leading" secondItem="7LK-uA-7fl" secondAttribute="leading" id="s1A-Jj-Af2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JNW-Zr-M91" secondAttribute="trailing" id="viV-ei-e9W"/>
+                                                    </constraints>
+                                                </view>
+                                                <color key="borderColor" white="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="fillColor" white="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </box>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="MdL-Ur-DWv" firstAttribute="top" secondItem="lc8-pQ-Cgm" secondAttribute="top" id="A88-kA-lCZ"/>
+                                            <constraint firstAttribute="leading" secondItem="MdL-Ur-DWv" secondAttribute="leading" id="bKf-3i-jzs"/>
+                                            <constraint firstAttribute="width" secondItem="MdL-Ur-DWv" secondAttribute="width" id="cYy-59-8eg"/>
+                                            <constraint firstItem="MdL-Ur-DWv" firstAttribute="height" secondItem="lc8-pQ-Cgm" secondAttribute="height" id="dr3-3f-0VW"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="g2y-j9-pkt" userLabel="Devices split panel">
+                                        <rect key="frame" x="198" y="0.0" width="218" height="576"/>
+                                        <subviews>
+                                            <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="VBx-aB-Jng">
+                                                <rect key="frame" x="0.0" y="0.0" width="218" height="576"/>
+                                                <view key="contentView" id="0Go-FS-q3v">
+                                                    <rect key="frame" x="0.0" y="0.0" width="218" height="576"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <containerView translatesAutoresizingMaskIntoConstraints="NO" id="vcS-ZR-URn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="218" height="576"/>
+                                                            <connections>
+                                                                <segue destination="QSc-Y4-5Cx" kind="embed" identifier="DevicesViewController" id="GKl-dZ-2r0"/>
+                                                            </connections>
+                                                        </containerView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="vcS-ZR-URn" firstAttribute="top" secondItem="0Go-FS-q3v" secondAttribute="top" id="7v7-1V-gb5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vcS-ZR-URn" secondAttribute="trailing" id="CGO-Zy-TAs"/>
+                                                        <constraint firstItem="vcS-ZR-URn" firstAttribute="leading" secondItem="0Go-FS-q3v" secondAttribute="leading" id="JKd-Yd-s8k"/>
+                                                        <constraint firstAttribute="bottom" secondItem="vcS-ZR-URn" secondAttribute="bottom" id="khv-v2-Yoi"/>
+                                                    </constraints>
+                                                </view>
+                                                <color key="borderColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="fillColor" name="underPageBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </box>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VBx-aB-Jng" firstAttribute="leading" secondItem="g2y-j9-pkt" secondAttribute="leading" id="9m4-67-ivh"/>
+                                            <constraint firstItem="VBx-aB-Jng" firstAttribute="height" secondItem="g2y-j9-pkt" secondAttribute="height" id="aMx-iO-k3z"/>
+                                            <constraint firstItem="VBx-aB-Jng" firstAttribute="width" secondItem="g2y-j9-pkt" secondAttribute="width" id="aQc-oO-fMC"/>
+                                            <constraint firstItem="VBx-aB-Jng" firstAttribute="top" secondItem="g2y-j9-pkt" secondAttribute="top" id="uVs-ef-3Dl"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="zbs-Rg-CsX" userLabel="Packets split panel">
+                                        <rect key="frame" x="417" y="0.0" width="410" height="576"/>
+                                        <subviews>
+                                            <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="buX-0C-nYy">
+                                                <rect key="frame" x="0.0" y="0.0" width="410" height="576"/>
+                                                <view key="contentView" id="cvt-Xd-vI3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="410" height="576"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="fsy-NS-UAk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="410" height="576"/>
+                                                            <view key="contentView" id="0tW-SS-WiY">
+                                                                <rect key="frame" x="0.0" y="0.0" width="410" height="576"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            </view>
+                                                            <color key="fillColor" white="0.0" alpha="0.040000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </box>
+                                                        <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="weG-2z-gyy" customClass="BaseSplitView" customModule="Bagel" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="410" height="546"/>
+                                                            <subviews>
+                                                                <customView id="N0u-KV-KSZ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="410" height="273"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <containerView translatesAutoresizingMaskIntoConstraints="NO" id="zwD-c6-zHt">
+                                                                            <rect key="frame" x="10" y="10" width="390" height="263"/>
+                                                                            <connections>
+                                                                                <segue destination="qMc-Mv-va5" kind="embed" identifier="PacketsViewController" id="gBm-nl-eRp"/>
+                                                                            </connections>
+                                                                        </containerView>
+                                                                        <box boxType="custom" borderWidth="0.0" cornerRadius="2" translatesAutoresizingMaskIntoConstraints="NO" id="r9w-eG-O30">
+                                                                            <rect key="frame" x="195" y="-2" width="20" height="4"/>
+                                                                            <view key="contentView" id="74A-Sd-x9X">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="4"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            </view>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="20" id="DLa-4M-5ZF"/>
+                                                                                <constraint firstAttribute="height" constant="4" id="zqP-Qi-1ez"/>
+                                                                            </constraints>
+                                                                            <color key="fillColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                        </box>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="zwD-c6-zHt" firstAttribute="top" secondItem="N0u-KV-KSZ" secondAttribute="top" id="3jg-XH-TDe"/>
+                                                                        <constraint firstItem="r9w-eG-O30" firstAttribute="centerX" secondItem="N0u-KV-KSZ" secondAttribute="centerX" id="9d7-Sz-1gK"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="zwD-c6-zHt" secondAttribute="bottom" constant="10" id="G0o-1e-Q0R"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="r9w-eG-O30" secondAttribute="bottom" constant="-2" id="bPa-pP-71i"/>
+                                                                        <constraint firstItem="zwD-c6-zHt" firstAttribute="leading" secondItem="N0u-KV-KSZ" secondAttribute="leading" constant="10" id="lfx-kj-AHm"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="zwD-c6-zHt" secondAttribute="trailing" constant="10" id="qIE-TW-cAd"/>
+                                                                    </constraints>
+                                                                </customView>
+                                                                <customView id="xC7-k8-PGG">
+                                                                    <rect key="frame" x="0.0" y="274" width="410" height="272"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <containerView translatesAutoresizingMaskIntoConstraints="NO" id="6vH-jg-UZJ">
+                                                                            <rect key="frame" x="10" y="10" width="390" height="252"/>
+                                                                            <connections>
+                                                                                <segue destination="sEX-Ye-dwa" kind="embed" identifier="DetailViewController" id="x3Z-RC-o5A"/>
+                                                                            </connections>
+                                                                        </containerView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="6vH-jg-UZJ" firstAttribute="top" secondItem="xC7-k8-PGG" secondAttribute="top" constant="10" id="Eid-7F-Fp9"/>
+                                                                        <constraint firstItem="6vH-jg-UZJ" firstAttribute="leading" secondItem="xC7-k8-PGG" secondAttribute="leading" constant="10" id="hbm-K3-WWV"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="6vH-jg-UZJ" secondAttribute="bottom" constant="10" id="jo1-4E-7xd"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="6vH-jg-UZJ" secondAttribute="trailing" constant="10" id="qTo-ZG-rr6"/>
+                                                                    </constraints>
+                                                                </customView>
+                                                            </subviews>
+                                                            <holdingPriorities>
+                                                                <real value="250"/>
+                                                                <real value="250"/>
+                                                            </holdingPriorities>
+                                                        </splitView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="weG-2z-gyy" firstAttribute="top" secondItem="cvt-Xd-vI3" secondAttribute="top" constant="30" id="0pE-x8-EVy"/>
+                                                        <constraint firstAttribute="bottom" secondItem="fsy-NS-UAk" secondAttribute="bottom" id="6Xd-zi-LrY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="weG-2z-gyy" secondAttribute="bottom" id="7Bp-TF-Oq5"/>
+                                                        <constraint firstItem="fsy-NS-UAk" firstAttribute="leading" secondItem="cvt-Xd-vI3" secondAttribute="leading" id="Jzq-Wo-WMQ"/>
+                                                        <constraint firstItem="fsy-NS-UAk" firstAttribute="top" secondItem="cvt-Xd-vI3" secondAttribute="top" id="RpO-jO-fz7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="weG-2z-gyy" secondAttribute="trailing" id="UsK-KI-v3a"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fsy-NS-UAk" secondAttribute="trailing" id="Vpd-MM-bDd"/>
+                                                        <constraint firstItem="weG-2z-gyy" firstAttribute="leading" secondItem="cvt-Xd-vI3" secondAttribute="leading" id="wjf-1p-JLN"/>
+                                                    </constraints>
+                                                </view>
+                                                <color key="borderColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </box>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="buX-0C-nYy" firstAttribute="leading" secondItem="zbs-Rg-CsX" secondAttribute="leading" id="4kC-hj-q6o"/>
+                                            <constraint firstItem="buX-0C-nYy" firstAttribute="width" secondItem="zbs-Rg-CsX" secondAttribute="width" id="agU-5T-t8s"/>
+                                            <constraint firstItem="buX-0C-nYy" firstAttribute="height" secondItem="zbs-Rg-CsX" secondAttribute="height" id="jjM-RP-iQf"/>
+                                            <constraint firstItem="buX-0C-nYy" firstAttribute="top" secondItem="zbs-Rg-CsX" secondAttribute="top" id="mVU-Vz-DAf"/>
+                                        </constraints>
+                                    </customView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="MdL-Ur-DWv" firstAttribute="leading" secondItem="pum-eU-Zhk" secondAttribute="leading" id="68K-hY-N3S"/>
-                                    <constraint firstAttribute="bottom" secondItem="MdL-Ur-DWv" secondAttribute="bottom" id="7ZN-xK-jI5"/>
-                                    <constraint firstItem="MdL-Ur-DWv" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="9xH-GY-p0i"/>
-                                    <constraint firstAttribute="bottom" secondItem="buX-0C-nYy" secondAttribute="bottom" id="Bd0-6m-QDG"/>
-                                    <constraint firstAttribute="bottom" secondItem="VBx-aB-Jng" secondAttribute="bottom" id="C9b-iF-KH2"/>
-                                    <constraint firstAttribute="trailing" secondItem="buX-0C-nYy" secondAttribute="trailing" id="Hwq-wC-1Sf"/>
-                                    <constraint firstItem="VBx-aB-Jng" firstAttribute="leading" secondItem="MdL-Ur-DWv" secondAttribute="trailing" id="MBF-Jc-Pgw"/>
-                                    <constraint firstItem="VBx-aB-Jng" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="QH2-v0-Nxv"/>
-                                    <constraint firstItem="buX-0C-nYy" firstAttribute="leading" secondItem="VBx-aB-Jng" secondAttribute="trailing" id="Y9s-j0-J3U"/>
-                                    <constraint firstItem="buX-0C-nYy" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="tPC-xY-5Xi"/>
-                                </constraints>
-                            </customView>
+                                <holdingPriorities>
+                                    <real value="251"/>
+                                    <real value="250"/>
+                                    <real value="150"/>
+                                </holdingPriorities>
+                            </splitView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="pum-eU-Zhk" firstAttribute="top" secondItem="oAB-hK-plE" secondAttribute="top" id="6oR-v8-wNq"/>
-                            <constraint firstAttribute="bottom" secondItem="pum-eU-Zhk" secondAttribute="bottom" id="IFJ-Om-85I"/>
-                            <constraint firstItem="pum-eU-Zhk" firstAttribute="leading" secondItem="oAB-hK-plE" secondAttribute="leading" id="LqT-3b-J9I"/>
-                            <constraint firstAttribute="trailing" secondItem="pum-eU-Zhk" secondAttribute="trailing" id="ZP6-5e-6jt"/>
+                            <constraint firstItem="ws1-tG-eUr" firstAttribute="leading" secondItem="oAB-hK-plE" secondAttribute="leading" id="AYG-gP-fkd"/>
+                            <constraint firstItem="ws1-tG-eUr" firstAttribute="width" secondItem="oAB-hK-plE" secondAttribute="width" id="SVr-bn-lRl"/>
+                            <constraint firstItem="ws1-tG-eUr" firstAttribute="height" secondItem="oAB-hK-plE" secondAttribute="height" id="eI1-2J-R14"/>
+                            <constraint firstItem="ws1-tG-eUr" firstAttribute="top" secondItem="oAB-hK-plE" secondAttribute="top" id="yre-KU-g22"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="devicesBackgroundBox" destination="VBx-aB-Jng" id="Cd2-Nz-3h1"/>
+                        <outlet property="devicesSplitView" destination="g2y-j9-pkt" id="gEu-cA-805"/>
                         <outlet property="packetsBackgroundBox" destination="buX-0C-nYy" id="5vI-qx-nyB"/>
+                        <outlet property="packetsSplitView" destination="zbs-Rg-CsX" id="9LF-JL-90F"/>
                         <outlet property="projectsBackgroundBox" destination="MdL-Ur-DWv" id="edN-fP-mIh"/>
+                        <outlet property="projectsSplitView" destination="lc8-pQ-Cgm" id="dVp-Ao-PQe"/>
+                        <outlet property="splitView" destination="ws1-tG-eUr" id="Ysg-Yc-anh"/>
                     </connections>
                 </viewController>
                 <customObject id="uWW-aP-frM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

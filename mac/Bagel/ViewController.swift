@@ -19,6 +19,12 @@ class ViewController: NSViewController {
     @IBOutlet weak var projectsBackgroundBox: NSBox!
     @IBOutlet weak var devicesBackgroundBox: NSBox!
     @IBOutlet weak var packetsBackgroundBox: NSBox!
+
+    @IBOutlet weak var splitView: NSSplitView!
+
+    @IBOutlet weak var projectsSplitView: NSView!
+    @IBOutlet weak var devicesSplitView: NSView!
+    @IBOutlet weak var packetsSplitView: NSView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
