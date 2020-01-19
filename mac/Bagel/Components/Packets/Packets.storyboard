@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ik0-80-xdq">
-                                <rect key="frame" x="0.0" y="0.0" width="693" height="323"/>
+                                <rect key="frame" x="0.0" y="0.0" width="693" height="167"/>
                                 <view key="contentView" id="l6n-Cg-gnI">
-                                    <rect key="frame" x="0.0" y="0.0" width="693" height="323"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="693" height="167"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ZW4-OH-5nY" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="293" width="693" height="30"/>
+                                            <rect key="frame" x="0.0" y="137" width="693" height="30"/>
                                             <view key="contentView" id="qjB-uP-iog">
                                                 <rect key="frame" x="0.0" y="0.0" width="693" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,13 +33,13 @@
                                             </constraints>
                                         </box>
                                         <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrP-mL-3Pf">
-                                            <rect key="frame" x="0.0" y="30" width="693" height="288"/>
+                                            <rect key="frame" x="0.0" y="30" width="693" height="132"/>
                                             <clipView key="contentView" drawsBackground="NO" id="6bT-JL-IQA">
-                                                <rect key="frame" x="0.0" y="0.0" width="693" height="288"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="693" height="132"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="P5w-QZ-Fyb" viewBased="YES" id="CKi-fU-sLr" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="693" height="263"/>
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="P5w-QZ-Fyb" viewBased="YES" id="CKi-fU-sLr" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="693" height="107"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -57,6 +57,7 @@
                                                                     <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <tableColumnResizingMask key="resizingMask" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="StatusPacketTableCellView" focusRingType="none" id="VPk-w5-xdq" customClass="StatusPacketTableCellView" customModule="Bagel" customModuleProvider="target">
                                                                         <rect key="frame" x="1" y="1" width="40" height="20"/>
@@ -93,6 +94,7 @@
                                                                     <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <tableColumnResizingMask key="resizingMask" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="MethodPacketTableCellView" focusRingType="none" id="eqC-zI-qTu" customClass="MethodPacketTableCellView" customModule="Bagel" customModuleProvider="target">
                                                                         <rect key="frame" x="44" y="1" width="52" height="20"/>
@@ -118,7 +120,7 @@
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
                                                             </tableColumn>
-                                                            <tableColumn identifier="url" width="142" minWidth="40" maxWidth="1000" id="CBP-23-K9t">
+                                                            <tableColumn identifier="url" width="142" minWidth="40" maxWidth="3000" id="CBP-23-K9t">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="URL">
                                                                     <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -129,7 +131,7 @@
                                                                     <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
-                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="URLPacketTableCellView" focusRingType="none" id="gqm-6g-9Tm" customClass="URLPacketTableCellView" customModule="Bagel" customModuleProvider="target">
                                                                         <rect key="frame" x="99" y="1" width="142" height="20"/>
@@ -166,7 +168,7 @@
                                                                     <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
-                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="DatePacketTableCellView" focusRingType="none" id="0Hf-Bc-1kK" customClass="DatePacketTableCellView" customModule="Bagel" customModuleProvider="target">
                                                                         <rect key="frame" x="244" y="1" width="319" height="20"/>
