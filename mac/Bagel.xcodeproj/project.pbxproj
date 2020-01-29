@@ -97,6 +97,7 @@
 		BCFC854E2138490E001EC6D7 /* BagelDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC854D2138490E001EC6D7 /* BagelDeviceModel.swift */; };
 		BCFC855021384981001EC6D7 /* BagelPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC854F21384981001EC6D7 /* BagelPacket.swift */; };
 		BE725DF123D3E75600F93235 /* ViewController+InitialSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE725DF023D3E75600F93235 /* ViewController+InitialSize.swift */; };
+		BE91950623E23AD4007C0347 /* OverviewViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE91950523E23AD4007C0347 /* OverviewViewController+Actions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,7 @@
 		BCFC854D2138490E001EC6D7 /* BagelDeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelDeviceModel.swift; sourceTree = "<group>"; };
 		BCFC854F21384981001EC6D7 /* BagelPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelPacket.swift; sourceTree = "<group>"; };
 		BE725DF023D3E75600F93235 /* ViewController+InitialSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+InitialSize.swift"; sourceTree = "<group>"; };
+		BE91950523E23AD4007C0347 /* OverviewViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OverviewViewController+Actions.swift"; sourceTree = "<group>"; };
 		CF8C8D13D8DDE9F8E381A103 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		D3BC1136B2E3E3417E241E77 /* Pods-Bagel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -472,6 +474,7 @@
 		BCD0E025210F5E0D00CE5C7B /* Bagel */ = {
 			isa = PBXGroup;
 			children = (
+				BE91950223E23A95007C0347 /* Upgrades */,
 				BC911A3F2168BC7F00B755D4 /* Themes */,
 				BC1F5B35216746CA0045C871 /* Fonts */,
 				BC75A80921737A7300A2A5B3 /* jsonViewer */,
@@ -643,6 +646,30 @@
 				BCA60B422162145500B9DCAD /* Publisher */,
 			);
 			path = BagelController;
+			sourceTree = "<group>";
+		};
+		BE91950223E23A95007C0347 /* Upgrades */ = {
+			isa = PBXGroup;
+			children = (
+				BE91950323E23AA9007C0347 /* Components */,
+			);
+			path = Upgrades;
+			sourceTree = "<group>";
+		};
+		BE91950323E23AA9007C0347 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BE91950423E23AB0007C0347 /* Details */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BE91950423E23AB0007C0347 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				BE91950523E23AD4007C0347 /* OverviewViewController+Actions.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		DE6C4711091F42DCE97894B2 /* Pods */ = {
@@ -877,6 +904,7 @@
 				BC7E67E7216E181400E1289E /* DataJSONRepresentation.swift in Sources */,
 				BC9C77B42163897F00E8ADE8 /* DataJSONViewModel.swift in Sources */,
 				BCBD86E4215916E0009CBEA7 /* BagelProjectController.swift in Sources */,
+				BE91950623E23AD4007C0347 /* OverviewViewController+Actions.swift in Sources */,
 				BCEB9AB7217DD546008BBF3C /* DatePacketTableCellView.swift in Sources */,
 				BCFC854021384667001EC6D7 /* ProjectsViewModel.swift in Sources */,
 				BC9C77C5216398CC00E8ADE8 /* ResponseDataViewModel.swift in Sources */,

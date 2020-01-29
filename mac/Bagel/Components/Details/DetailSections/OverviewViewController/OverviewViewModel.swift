@@ -40,4 +40,12 @@ class OverviewViewModel: BaseViewModel {
     func copyCURLToClipboard() {
         self.curlRepresentation?.copyToClipboard()
     }
+
+    func copyRequestBodyToClipboard() {
+        self.packet?.requestInfo?.requestBody
+    }
+
+    func copyResponseBodyToClipboard() {
+
+    }
 }
